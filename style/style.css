@@ -103,14 +103,6 @@ nav img{
     margin: 20px;
 }
 
-nav img:hover{
-    border-bottom-color: #780099;
-
-    transition: 1.5s;
-
-    translate: 10%;
-}
-
 nav > h1{
     color: rgb(0, 0, 0);
 
@@ -150,10 +142,6 @@ nav > p{
 
     padding: 10px;
     margin: 10px auto;
-}
-
-nav > a::before{
-    content: '\00A0\1F4BB';
 }
 
 article{
@@ -228,7 +216,7 @@ section{
     background-color: white;
     border-top: 3px solid var(--cor01); 
 
-    width: 94vw;
+    width: 90vw;
     height: 30vh;
 
     margin: 10px auto;
