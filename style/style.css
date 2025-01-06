@@ -94,6 +94,7 @@ nav{
 
 nav img{
     display: inline-block;
+    min-width: 50%;
     max-width: 30%;
 
     border: 5px solid rgb(0, 0, 0);
@@ -147,6 +148,7 @@ nav > p{
 article{
     background-color: white;
     border-top: 3px solid var(--cor01); 
+    width: 90vw;
 
     box-shadow:  3px 5px 0px rgb(255, 255, 255);
 
