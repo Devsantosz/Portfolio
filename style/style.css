@@ -150,10 +150,6 @@ article{
     border-top: 3px solid var(--cor01); 
     width: 90vw;
 
-    box-shadow:  3px 5px 0px rgb(255, 255, 255);
-
-    text-align: center;
-
     margin: 10px auto;
     padding: 10px;
 }
@@ -173,7 +169,7 @@ article  > div.skills{
 
 article > div > div.skill{
     background-color: #000000;
-    border: 3px solid #A000CC;
+    border: 3px solid #000000;
 
     border-radius: 5px;
 
@@ -242,32 +238,29 @@ section{
 }
 
 section > h3{
-    color: black;
-
     font: bold 1.2em var(--fonte01);
     text-align: left;
 
-    padding: 5px;
+    color: rgb(0, 0, 0); 
+
+    padding: 10px;
 }
 
 section > .work{
     background-color: rgba(102, 102, 102, 0.589);
     color: black;
 
-    max-width: 90vw;
     height: 20vh;
-    border-radius: 10px;
+    border-radius: 5px;
 
 
     margin: 10px auto;
     padding: 10px;
 }
 
-section > .work p{
+section > .work > p{
     text-align: center;
-    margin: auto;
-    
-    padding: 50px;
+    bottom: 50%;
 }
 
 aside{
