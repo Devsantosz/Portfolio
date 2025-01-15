@@ -88,7 +88,7 @@ nav{
 
     background-color: white;
     
-    margin: 0px 30px auto;
+    margin: 20px auto;
 }
 
 
@@ -99,7 +99,7 @@ nav > img{
     border: 5px solid rgb(0, 0, 0);
     border-radius: 50%;
 
-    padding: 20px;
+    padding: 40px;
     margin: 30px auto;
 }
 
@@ -168,11 +168,12 @@ article  > div.skills{
 article > div > div.skill{
     background-color: #000000;
     border: 3px solid #000000;
+    height: 25vh;
 
     border-radius: 5px;
 
     margin: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 
 
@@ -191,7 +192,8 @@ article > div > div.skill > p{
     color: rgb(0, 0, 0);
     border-radius: 5px;
 
-    font: 400 1em var(--fonte01);
+    font: 400 1.4em var(--fonte01);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.158);
 
     text-indent: 10px;
     text-align: justify;
