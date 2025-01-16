@@ -84,7 +84,7 @@ main{
 
 nav{
     width:90vw;
-    height: calc(97vh -  42px);
+    height: calc(97vh -  39px);
 
     background-color: white;
     
@@ -135,7 +135,7 @@ nav > p{
     text-align: justify;
     text-indent: 10px;
 
-    width: 420px;
+    max-width: 420px;
 
     padding: 10px;
     margin: 15px auto;
@@ -172,8 +172,8 @@ article > div > div.skill{
 
     border-radius: 5px;
 
-    margin: 20px;
-    padding: 20px;
+    margin: 30px;
+    padding: 10px;
 }
 
 
@@ -188,7 +188,7 @@ article > div > div.skill > h3{
 }
 
 article > div > div.skill > p{
-    background-color: rgba(255, 255, 255, 0.24);
+    background-color: rgba(255, 255, 255, 0.411);
     color: rgb(0, 0, 0);
     border-radius: 5px;
 
@@ -197,6 +197,9 @@ article > div > div.skill > p{
 
     text-indent: 10px;
     text-align: justify;
+
+    width: 80%;
+    height: 50%;
 
     padding: 30px;
     margin: 10px;
