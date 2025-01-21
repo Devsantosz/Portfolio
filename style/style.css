@@ -99,8 +99,8 @@ nav > img{
     border: 5px solid rgb(0, 0, 0);
     border-radius: 50%;
 
-    padding: 40px;
-    margin: 30px auto;
+    padding: 30px;
+    margin: 40px auto;
 }
 
 nav > h1{
@@ -149,11 +149,10 @@ article{
     height: 100vh;
 
     margin:  auto;
-    padding: px;
 }
 
 article > h3{
-    font: bold 1.2em var(--fonte01);
+    font: bold 1.5em var(--fonte01);
     text-align: left;
 
     color: rgb(0, 0, 0); 
@@ -191,6 +190,7 @@ article > div > div.skill > p{
     background-color: rgba(255, 255, 255, 0.411);
     color: rgb(0, 0, 0);
     border-radius: 5px;
+    border: 3px solid black;
 
     font: 400 1.4em var(--fonte01);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.158);
@@ -199,7 +199,7 @@ article > div > div.skill > p{
     text-align: justify;
 
     width: 80%;
-    height: 50%;
+    height: 55%;
 
     padding: 30px;
     margin: 10px;
@@ -230,16 +230,40 @@ article > div > div#java {
 }
 
 aside{
-    background-image: linear-gradient( to right , var(--cor01), black);
-    color: white; 
-
+    display: block;
+    background-color: white;
+    border-top: 3px solid var(--cor01); 
     width: 90vw;
-    border-radius: 10px;
-    box-shadow:  3px 5px 0px rgb(255, 255, 255);
-    
-    margin: 10px auto;
+    height: 50vh;
+
+    margin:  auto;
 }
 
+aside > div > h3{
+    font: bold 1.5em var(--fonte01);
+    text-align: left;
+
+    color: rgb(0, 0, 0); 
+
+    padding: 10px;
+}
+
+aside > div > p{
+    border: 3px solid #780099;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+
+    font: bold 1.3em var(--fonte01);
+
+    padding: 10px;
+    margin: 30px;
+}
+
+aside > div > p > a{
+    color: #A000CC;
+    text-align: center;
+    text-decoration: none;
+}
 
 footer{
     background-color: #000000;
