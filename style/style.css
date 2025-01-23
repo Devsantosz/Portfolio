@@ -234,7 +234,7 @@ aside{
     background-color: white;
     border-top: 3px solid var(--cor01); 
     width: 90vw;
-    height: 50vh;
+    height: calc()50vh - 31px;
 
     margin:  auto;
 }
@@ -271,15 +271,16 @@ footer{
 
     text-align: center;
 
-    width: 97vw;
+    width: 100vw;
     
     margin: auto;
-    padding: 5px;
 }
 
 footer p{
     color: rgb(255, 255, 255); 
     font: bold 0.8em var(--fonte02);
+
+    padding: 10px;
 }
 
 footer a{
