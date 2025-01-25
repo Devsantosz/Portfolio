@@ -24,6 +24,9 @@
 html, body{
     background-color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
+
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -31,7 +34,7 @@ header{
     background-color: white;
     border-bottom: 3px solid var(--cor01); 
 
-    max-width: 100vw;
+    width: 100%;
     
     text-align: center;
 }
@@ -83,8 +86,8 @@ main{
 }
 
 nav{
-    width:90vw;
-    height: calc(97vh -  39px);
+    width:90%;
+    height: calc(97% -  39px);
 
     background-color: white;
     
@@ -145,8 +148,9 @@ article{
     display: block;
     background-color: white;
     border-top: 3px solid var(--cor01); 
-    width: 90vw;
-    height: 100vh;
+
+    width: 90%;
+    height: calc(100% - 49px);
 
     margin:  auto;
 }
