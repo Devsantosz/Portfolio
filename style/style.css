@@ -90,6 +90,7 @@ nav{
     width:100%;
     height: calc(100vh - 39px);
     
+    border-bottom: 3px solid var(--cor02); 
 
     margin: auto;
 }
@@ -133,4 +134,12 @@ nav > h3{
     width: 400px;
     margin: auto;
 
+}
+
+article{
+    width:100%;
+    height: calc(100vh - 39px);
+    
+
+    margin: auto;
 }
