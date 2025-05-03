@@ -71,6 +71,7 @@ header > ul > li > a{
     margin-right: 10px;
     padding: 10px;
 }
+
 header > ul > li > a:hover{
     background-image: linear-gradient( to bottom, black 1%, var(--cor02) 90%);
     color: rgb(255, 255, 255);
@@ -99,7 +100,6 @@ nav{
 
     margin: auto;
 }
-
 
 nav > img{
     position: absolute;
