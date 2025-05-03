@@ -72,7 +72,7 @@ header > ul > li > a{
     padding: 10px;
 }
 header > ul > li > a:hover{
-    background-color: var(--cor02);
+    background-image: linear-gradient( to bottom, black 1%, var(--cor02) 90%);
     color: rgb(255, 255, 255);
 
     border-radius: 10px 10px 0px 0px;
@@ -87,6 +87,11 @@ main{
 }
 
 nav{
+    background-image: url(../imagem/back\ purple.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     width:100%;
     height: calc(100vh - 39px);
     
