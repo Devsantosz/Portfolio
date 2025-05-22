@@ -11,9 +11,12 @@
     --fonte02: "Noto Sans", sans-serif;
     --fonte03: "Bruno Ace SC", sans-serif;
 
-    --cor01:#c600fd;
-    --cor02:#9900c4 ;
+    /*Monocromático*/
+    --cor01:#A159FF;
+    --cor02:#9870CC ;
     --cor03:#60007a ;
+    --cor04:#5D5766 ;
+    --cor05:#292133 ;
 }
 
 *{
@@ -31,7 +34,7 @@ html, body{
 
 header{
     background-color: rgb(0, 0, 0);
-    border-bottom: 3px solid var(--cor02); 
+    border-bottom: 3px solid #a259ff; 
 
     width: 100%;
     
@@ -63,9 +66,10 @@ header > ul > li{
 }
 
 header > ul > li > a{
-    color: rgb(250, 248, 248);
+    color: var(--cor02);
     font: bold 1em var(--fonte01);
     text-decoration: none;
+    text-shadow: 1px 1px 18px white;
     
     text-align: right;
 
@@ -74,50 +78,54 @@ header > ul > li > a{
 }
 
 header > ul > li > a:hover{
-    background-image: linear-gradient( to bottom, black 1%, var(--cor02) 90%);
-    color: rgb(255, 255, 255);
+    color: white;
 
-    border-radius: 10px 10px 0px 0px;
+    border-bottom: 2px solid white;
 
-    transition: 25ms;
+    transition: 50ms;
     padding-bottom: 10px;
 }
 
 main{
-    background-color: black;
+    background-color: #000000;
     color: white;
 }
 
 nav{
-    background-image: url(../imagem/back\ purple.jpg);
+    background-color: #000000;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 
-    width:100%;
+    width:95%;
     height: calc(100vh - 39px);
+
+    margin: auto;
     
     border-bottom: 3px solid var(--cor02); 
+
+    overflow: hidden;
 }
 
-nav > img{
+.home > img{
     backdrop-filter: transparent ;
 
     position: absolute;
-    max-width: 100%;
+    max-width: 80%;
 
     background-color: #fae4ff11;
     border-radius: 50%;
+    box-shadow: 0 0 20px #a259ff;
 
     left: 50%;
     top: 53%;
     transform: translate(-50%,-50%);
 }
 
-nav > h1{
+.home > h1{
+    font: bolder 2em;
     color: var(--cor01);
     text-transform: uppercase;
-    font: bolder 1.5em ;
     text-align: center;
     text-shadow: 3px 3px 10px rgba(170, 162, 162, 0.192);
 
@@ -126,12 +134,12 @@ nav > h1{
     position: absolute;
 
     left: 50%;
-    top: 18%;
+    top: 20%;
     transform: translate(-50%,-50%);
 }
 
-nav > h2{
-    font: bold 2.5em;
+.home > h2{
+    font: bold 2.1em;
     text-align: center;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.192);
 
@@ -143,7 +151,7 @@ nav > h2{
 }
 
 
-nav > h3{
+.home > p{
     font: 400 2em var(--fonte01);
     text-align: center; 
 
@@ -162,4 +170,5 @@ nav > h3{
     height: 100vh;
     
     border-bottom: 3px solid var(--cor02); 
+    font: 1em sans-serif;
 }
