@@ -69,7 +69,7 @@ header > ul > li > a{
     color: var(--cor02);
     font: bold 1em var(--fonte01);
     text-decoration: none;
-    text-shadow: 1px 1px 20px white;
+    text-shadow: 1px 1px 50px rgb(183, 0, 255);
     
     text-align: right;
 
@@ -107,19 +107,38 @@ nav{
     overflow: hidden;
 }
 
-.home > img{
-    backdrop-filter: transparent ;
-
+.home > #ime{
     position: absolute;
-    max-width: 80%;
+    width: 70%;
+    
 
-   background-color: rgba(255, 255, 255, 0.021);
     border-radius: 50%;
     box-shadow: 0px 0px 21px #a259ff;
-
+    
     left: 50%;
-    top: 52%;
+    top: 50%;
     transform: translate(-50%,-50%);
+
+    overflow: hidden;
+}
+
+.home > #ime > img{
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+
+    background-position: center ;
+}
+
+.home > #ime > img:hover{
+
+    transition: 3s;
+    scale: 1.8;
+
+    background-size: contain;
+
+    background-position: left top;
 }
 
 .home > h1{
@@ -163,8 +182,9 @@ nav{
     top: 86%;
     transform: translate(-50%,-50%);
     
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     border-bottom: 5px solid var(--cor02);
+    border-radius: 12px;
 }
 
 .sobre{
