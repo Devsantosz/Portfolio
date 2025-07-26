@@ -32,7 +32,7 @@ html, body{
     height:100%;
 }
 
-header{
+.menu{
     background-color: rgb(0, 0, 0);
     border-bottom: 3px solid #a259ff; 
 
@@ -41,7 +41,7 @@ header{
     display: block;
 }
 
-header > h2{
+.menu > h2{
     color: var(--cor01);
     display: inline-block;
 
@@ -52,7 +52,7 @@ header > h2{
 }
 
 
-header > ul{
+.menu > ul{
     display: inline-block;
     position: absolute;
     top: 10px;
@@ -60,12 +60,12 @@ header > ul{
   
 }
 
-header > ul > li{
+.menu > ul > li{
     list-style-type: none;
     display: inline-block;
 }
 
-header > ul > li > a{
+.menu > ul > li > a{
     color: var(--cor02);
     font: bold 1em var(--fonte01);
     text-decoration: none;
@@ -77,13 +77,15 @@ header > ul > li > a{
     padding: 10px;
 }
 
-header > ul > li > a:hover{
-    color: white;
+.menu > ul > li > a:hover{
+    color: rgb(2, 0, 0);
+    background-color: white;
 
     border-bottom: 2px solid white;
+    border-radius: 10px 10px 0px 0px;
 
-    transition: 50ms;
-    padding-bottom: 10px;
+    transition: 0.6s;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
 
 main{
@@ -92,29 +94,22 @@ main{
 }
 
 nav{
-    background-color: #000000;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
 
-    width:95%;
+    background: linear-gradient( to bottom,  black 50vh , #a159ff8f 100vh);
+
+    width:100%;
     height: calc(100vh - 39px);
 
     margin: auto;
-    
-    border-bottom: 3px solid var(--cor02); 
-
-    overflow: hidden;
 }
 
 .home > #ime{
     position: absolute;
-    width: 70%;
+    width: 80%;
     
+    
+    filter: drop-shadow(#a159ff52 4px 4px 5px);
 
-    border-radius: 50%;
-    box-shadow: 0px 0px 21px #a259ff;
-    
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -131,22 +126,13 @@ nav{
     background-position: center ;
 }
 
-.home > #ime > img:hover{
-
-    transition: 3s;
-    scale: 1.8;
-
-    background-size: contain;
-
-    background-position: left top;
-}
 
 .home > h1{
     font-size: 1.7em;
     color: var(--cor01);
     text-transform: uppercase;
     text-align: center;
-    text-shadow: 3px 3px 10px rgba(170, 162, 162, 0.192);
+    text-shadow: 3px 3px 10px rgba(231, 230, 231, 0.26);
 
     width: 320px;
 
@@ -172,7 +158,8 @@ nav{
 
 .home > p{
     font: 400 1.8em var(--fonte01);
-    text-align: center; 
+    text-align: center;
+    text-shadow: 3px 3px 10px rgba(128, 128, 128, 0.096); 
 
     width: 400px;
 
@@ -183,8 +170,7 @@ nav{
     transform: translate(-50%,-50%);
     
     padding-bottom: 20px;
-    border-bottom: 5px solid var(--cor02);
-    border-radius: 12px;
+
 }
 
 .sobre{
