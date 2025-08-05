@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -9,14 +9,14 @@
 :root{
     --fonte01: "Roboto", sans-serif;
     --fonte02: "Noto Sans", sans-serif;
-    --fonte03: "Bruno Ace SC", sans-serif;
+    --fonte03: "DM Sans", sans-serif;
 
     /*Monocromático*/
-    --cor01:#A159FF;
-    --cor02:#9870CC ;
-    --cor03:#60007a ;
-    --cor04:#5D5766 ;
-    --cor05:#292133 ;
+    --cor01:#B01BEA;
+    --cor02:#943BB8;
+    --cor03:#734585;
+    --cor04:#4B3B52;
+    --cor05:#312D33;
 }
 
 *{
@@ -34,19 +34,20 @@ html, body{
 
 .menu{
     background-color: rgb(0, 0, 0);
-    border-bottom: 3px solid #a259ff; 
-
+    border-bottom: 3px solid var(--cor02);
+    
     width: 100%;
     
     display: block;
 }
 
 .menu > h2{
-    color: var(--cor01);
+    color: white;
     display: inline-block;
 
 
     font: bolder 1em var(--fonte03);
+    text-transform: uppercase;
 
     padding: 10px;
 }
@@ -62,30 +63,22 @@ html, body{
 
 .menu > ul > li{
     list-style-type: none;
-    display: inline-block;
+    display: inline-block; 
+    padding-right: 15px;
 }
 
 .menu > ul > li > a{
-    color: var(--cor02);
+    color: var(--cor01);
     font: bold 1em var(--fonte01);
     text-decoration: none;
-    text-shadow: 1px 1px 50px rgb(183, 0, 255);
-    
+    text-shadow: 0px 0px 12px var(--cor01);
     text-align: right;
-
-    margin-right: 10px;
-    padding: 10px;
 }
 
 .menu > ul > li > a:hover{
-    color: rgb(2, 0, 0);
-    background-color: white;
-
-    border-bottom: 2px solid white;
-    border-radius: 10px 10px 0px 0px;
-
-    transition: 0.6s;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.568);
 }
 
 main{
@@ -94,8 +87,7 @@ main{
 }
 
 nav{
-
-    background: linear-gradient( to bottom,  black 50vh , #a159ff8f 100vh);
+    background: linear-gradient( to bottom,  black 50vh , var(--cor02) 100vh);
 
     width:100%;
     height: calc(100vh - 39px);
@@ -105,25 +97,23 @@ nav{
 
 .home > #ime{
     position: absolute;
-    width: 80%;
+    width: 100%;
     
-    
-    filter: drop-shadow(#a159ff52 4px 4px 5px);
+    filter: drop-shadow(var(--cor03) 4px 4px 5px);
+
 
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
 
-    overflow: hidden;
+    display: flex;
 }
 
 .home > #ime > img{
-    background-size: cover;
-
-    width: 100%;
-    height: 100%;
-
-    background-position: center ;
+    
+    margin: auto;
+    
+    max-width: 90%;
 }
 
 
@@ -147,6 +137,7 @@ nav{
     font-size: 1.7em;
     text-align: center;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.192);
+    color: #CCCCCC;
 
     position: absolute;
 
@@ -157,7 +148,8 @@ nav{
 
 
 .home > p{
-    font: 400 1.8em var(--fonte01);
+    color: #CCCCCC;
+    font: 600 1.8em var(--fonte03);
     text-align: center;
     text-shadow: 3px 3px 10px rgba(128, 128, 128, 0.096); 
 
@@ -173,7 +165,7 @@ nav{
 
 }
 
-.sobre{
+.on{
     width:100%;
     height: 100vh;
     
