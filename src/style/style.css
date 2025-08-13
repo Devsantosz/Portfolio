@@ -174,34 +174,90 @@ nav{
     display: flex;
     flex-flow: column wrap;
     
+    
 }
-.sobre > .info{
+.sobre > .sobre-info{
     width: 100%;
-    height: 50vh;
+   height: 20vh;
     flex: auto;
-    justify-content: space-around;
 }
 
-.sobre > .info >.txt{
-    margin: auto;
+.sobre > .sobre-info >.sobre-txt{
+    margin: 10px auto;
     width: 90%;
-    height: calc(100% - 80px);
+    height: 70%;
     padding: 10px;
     background-color: #cccccc2a;
     border-radius: 10px;
     border: 1px solid var(--cor02);
     
 }
-.sobre > .info > iframe{
-    flex: auto;
-    justify-content: center;
+.sobre > .sobre-info >.sobre-txt > h2{
+    font: 1.5em var(--fonte01);
+    color: var(--cor01);
+    text-align: left;
+    text-transform: uppercase;
+    margin: 5px;
 }
-.sobre > .card{
-    width: 100%;
-    height: 50vh;
-    flex: auto;
+.sobre > .sobre-info >.sobre-txt > p{
+    font: 1.5em var(--fonte01);
+    color: #cccccc;
+    text-align: justify;
+    text-indent: 20px;
+    
+    background-color: #cccccc2a;
+    padding: 10px;
+    border-radius: 8px;
+    height: 75%;
+}
+.sobre > .sobre-info > .sobre-iframe{
+    margin: auto;
+    width: 92%;
+    height: 80px;
+
 }
 
+.sobre > .sobre-card{
+    width: 90%;
+    height: 53vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    
+    margin: 10px auto;
+
+    background-color: #cccccc2a;
+    border-radius: 10px;
+    border: 2px solid black;
+
+}
+
+.sobre > .sobre-card > img{
+    justify-content: center;
+    display: block;
+    height: 60%;
+    border-radius: 5%;
+    margin: 10px auto;
+    border: 3px solid var(--cor02);
+}
+.sobre > .sobre-card > h2{
+    font: 1.5em var(--fonte01);
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sobre > .sobre-card > h3 {
+    font: 1.2em var(--fonte01);
+    color: black;
+    text-align: center;
+}
+.sobre > .sobre-card> p{
+    font: 1.2em var(--fonte01);
+    color: black;
+    text-align: center;
+    margin: 10px;
+}
 .on{
     width:100%;
     height: 100vh;
