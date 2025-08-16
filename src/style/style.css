@@ -87,7 +87,7 @@ nav{
     background: linear-gradient( to bottom,  black 50vh , var(--cor02) 100vh);
 
     width:100%;
-    height: calc(100vh - 39px);
+    height: calc(100vh - 44px);
 
     margin: auto;
 }
@@ -170,29 +170,35 @@ nav{
     height: 100vh;
     display: flex;
     flex-flow: column wrap; 
+    padding-top: 20px;
 }
 .sobre > .sobre-info{
     width: 100%;
-    max-height: 40vh;
-    flex: auto;
+    height: 35vh;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
 }
 
 .sobre > .sobre-info >.sobre-txt{
-    margin: 20px auto;
-    width: 75%;
-    max-height: 60%;
-    padding: 10px;
+
+    width: 70%;
+    padding: 5px;
     background-color: #cccccc2a;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid var(--cor02);
-    
+    box-shadow: 0px 0px 10px rgba(95, 95, 95, 0.658) ;
+
+    margin: 5px;
 }
 .sobre > .sobre-info >.sobre-txt > h2{
     font: 1.5em var(--fonte01);
-    color: var(--cor01);
+    color: white;
     text-align: left;
-    text-transform: uppercase;
-    margin: 5px;
+    
+  
 }
 .sobre > .sobre-info >.sobre-txt > p{
     font: 1.2em var(--fonte01);
@@ -200,64 +206,76 @@ nav{
     text-align: justify;
     text-indent: 10px;
     
+
+    
     background-color: #cccccc2a;
     padding: 5px;
     border-radius: 8px;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5) ;
 }
 .sobre > .sobre-info > .sobre-iframe{
     margin: auto;
-    width: 80%;
+    width: 70%;
     height: 80px;
 
-    margin: 10px auto;
+    margin: 5px auto;
 }
 
 .sobre > .sobre-card{
-    width: 80%;
-    height: 60%;
+    width: 100%;
+    height: calc(100vh - 35vh);
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: auto;
+}
+
+.sobre > .sobre-card > .sobre-card-img{
+    width: 70%;
+    height: 90%;
+    
+    background-color: #707070cc;
+    border-radius: 8px;
+    border: 2px solid var(--cor05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) ;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5) ;
+
     display: flex;
     flex-flow: column wrap;
-
-    margin: auto;
-
-    background-color: #cccccc2a;
-    border-radius: 10px;
-    border: 2px solid black;
-
-}
-
-.sobre > .sobre-card > img{
     justify-content: center;
-    display: block;
-    max-height: 60%;
-    border-radius: 5%;
-    margin: 20px auto;
-    border: 3px solid var(--cor02);
-}
-.sobre > .sobre-card > h2{
-    font: 2em var(--fonte01);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-transform: uppercase;
 }
 
-.sobre > .sobre-card > h3 {
+.sobre > .sobre-card > .sobre-card-img > img{
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 10px;
+    border: 3px solid var(--cor04);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    
+    display: block;
+}
+.sobre > .sobre-card > .sobre-card-img > h2{
+    font: 2em var(--fonte01);
+    color: white;
+    
+    text-transform: uppercase;   
+    text-align: center;
+    
+    
+}
+
+.sobre > .sobre-card > .sobre-card-img > h3 {
     font: 1.8em var(--fonte01);
     color: white;
-    text-align: center;
     width: 100%;
-}
-.sobre > .sobre-card> p{
-    font: 1.6em var(--fonte01);
+
+   text-align: center;
+ 
+} 
+.sobre > .sobre-card > .sobre-card-img > p{
+    font: bold 1.6em var(--fonte01);
     color: black;
     text-align: center;
-    margin: 10px;
-    padding: 10px;
-}
-.on{
-    width:100%;
-    height: 100vh;
-    
-    border-bottom: 3px solid var(--cor02); 
-    font: 1em sans-serif;
+    margin: 10px auto;
 }
