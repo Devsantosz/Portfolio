@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagem/favicon.ico.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/style/style.css" T>
+    <link rel="stylesheet" href="src/style/style.css" >
+    <link rel="stylesheet" href="src/style/Responsive-style.css">
     <title>Devsantosz</title>
 </head>
 <body>
-    <header id="menu"  class="menu">
-        <h2>
-            Devsantosz
-        </h2>
-            <ul id="list-menu">
-                <li><a href="#home" target="_parent">Home</a></li>
-                <li><a href="#sobre" target="_parent">Sobre</a></li>
-                <li><a href="#on" target="_parent">Skill</a></li>
-                <li><a href="#contato" target="_parent">Contato</a></li>
-            </ul>
-    </header>
+    <header id="menu" class="menu">
+    <h2>Devsantosz</h2>
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <ul id="list-menu">
+        <li><a href="#home" target="_parent">Home</a></li>
+        <li><a href="#on" target="_parent">On</a></li>
+        <li><a href="#more" target="_parent">More</a></li>
+        <li><a href="#contate" target="_parent">Contate</a></li>
+    </ul>
+</header>
     <main>
         <nav id="home" class="home">
                 <h2>
@@ -35,9 +38,10 @@
                     SEJAM BEM-VINDOS AO MEU PORTFÓLIO WEBSITE                
                 </p>
         </nav>
-        <article class="sobre" id="sobre">
-           <div class="sobre-info" id="sobre-info">
-                <div class="sobre-txt" id="sobre-itxt">
+        <article class="on" id="on">
+        <div class="on-container" id="on-container">
+           <div class="on-info" id="on-info">
+                <div class="on-txt" id="on-itxt">
                     <h2>
                         Eu sou...
                     </h2>
@@ -45,15 +49,15 @@
                           Um Jovem Desenvolvedor de 19 anos, inspirado a desafiar os próprios limites, estudando e construindo meus próprios desafios, sempre tentando se superar e aprimorar minhas habilidades e conhecimentos. 
                     </p>
                 </div>
-                <div class="sobre-iframe" id="sobre-iframe">
+                <div class="on-iframe" id="on-iframe">
                     <iframe data-testid="embed-iframe" style="border-radius: 10px" src="https://open.spotify.com/embed/track/0s3cLPceTPHQcnFtSCJtCH?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
 
                     </iframe>
                 </div>
            </div>
 
-           <div class="sobre-card" id="sobre-card">
-                <div class="sobre-card-img" id="sobre-card-img">
+           <div class="on-card" id="on-card">
+                <div class="on-card-img" id="on-card-img">
                     <img src="src/image/foto-perfil.jpeg" alt="foto-perfil">
                     <h2>
                         Guilherme Luz
@@ -66,13 +70,14 @@
                     </p>
                 </div>
            </div>
-
+        </div>
         </article>
-        <article class="on" id="on">
-            <h3>
+        <article class="more" id="more">
+            
+            <div class="skills">
+                <h3>
                 Minhas habilidades:
             </h3>
-            <div class="skills">
                 <div id="html" class="skill">
                         <h3>
                             HTML5
@@ -100,32 +105,57 @@
 
             </div>
         </article>
-        
-        <aside>
-            <div class="contato" id="contato">
-                <h3>
-                    Contato:
-                </h3>
-                <p>
-                    LInkedIn <a href="https://www.linkedin.com/in/guilherme-luz-085239282" target="_blank">Guilherme Luz</a>
-                </p>
-                <p>
-                    GitHub <a href="https://github.com/Devsantosz" target="_blank">Devsantosz</a>
-                </p>
-                <p>
-                    Insta
-                </p>
-                <p>
-                    Telegram <a href="http://t.me/GuilhermeluzDev" target="_blank">GuilhermeluzDev</a>
-                </p>
+        <section class="contate" id="contate">
+            <h2>Contate:</h2>
+
+            <a href="https://github.com/Devsantosz" target="_blank">
+                <div class="contate" id="contate">
+                <div class="card">
+                    <div class="icon">
+                        <img src="src/image/logo github.png" alt="GitHub">
+                    </div>
+                    <h3>GitHub</h3>
+                    <span>Devsantosz</span>
+                </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/guilherme-luz-085239282" target="_blank">
+                <div class="card">
+                <div class="icon">
+                        <img src="src/image/LinkedIn.png" alt="LinkedIn">
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <span>Guilherme Luz</span>
+                </div>
+            </a>
+
+            <!-- Telegram -->
+            <a href="http://t.me/GuilhermeluzDev" target="_blank">
+            <div class="card">
+                <div class="icon">
+                    <img src="src/image/tele.jpeg" alt="Telegram">
+                </div>
+                <h3>Telegram</h3>
+                <span>Guilherme Luz</span>
             </div>
-            
-        </aside>
+            </a>
+        </div>
+        </section>
     </main>
     <footer>
         <p>
              &copy Não seja uma cópia, site criado por <a href="https://github.com/Devsantosz" target="_blank"> Devsantosz</a>
         </p>
-    </footer>
+    </footer>//
 </body>
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("list-menu");
+
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+
 </html>
