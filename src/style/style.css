@@ -202,7 +202,7 @@ main{
 
 .on-card-img {
     width: 90%;
-    max-width: 450px;
+    max-width: 850px;
     backdrop-filter: blur(20px);
     border-radius: 8px;
     border: 2px solid var(--cor05);
@@ -241,6 +241,89 @@ main{
     color: black;
     text-align: center;
     margin-top: 10px;
+}
+
+.more{
+    background: linear-gradient(to bottom, black 50vh, var(--cor02) 100vh);
+    color: white;
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.more > .skill{
+    width: 100%;
+    height: 30vh;
+}
+.more > .skill > h3{
+    font-size: 1.5em;
+    text-align: left;
+    width: 100%;
+}
+
+.more > .skill .skill-container {
+    width: 100%;
+    height: 72%;
+    display: flex;
+    flex-flow: row wrap; /* organiza em linhas, permitindo quebra */
+    justify-content: space-evenly; /* distribui os cards igualmente no espaço */
+    align-items: center; /* centraliza verticalmente */
+}
+
+.more > .skill > .skill-container > .skills {
+    backdrop-filter: blur(20px);
+    border: 2px solid var(--cor04); 
+    border-radius: 8px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    margin: 10px;
+    flex: auto; 
+}
+
+.more > .work{
+    width: 100%;
+    max-width: 2000px;
+    height: calc(100vh - 40px - 30vh);
+    margin: auto;
+}
+.more > .work > h3{
+    font-size: 1.6em;
+    text-align: left;
+    width: 100%;
+}
+
+.more > .work > .work-container {
+    width: 100%;
+    height: 90%;
+    margin-top: 10px;
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    border: 2px solid var(--cor05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
+
+    display: flex;
+    flex-flow: row nowrap;   /
+    justify-content: flex-start; 
+    overflow-x: auto;      
+    overflow-y: hidden;
+    scroll-behavior: smooth; 
+    
+}
+
+.more > .work > .work-container > .work-card {
+    background: #4747478c; 
+    border: 2px solid var(--cor04); 
+    border-radius: 8px; 
+    padding: 10px;
+    margin: 10px;
+    flex: auto;
+    height: 90%;
+    min-width: 400px;
+    max-width: 100%; 
+    
 }
 
 .contate {

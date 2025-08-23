@@ -65,18 +65,3 @@
 
 
 
-/* Responsividade */
-@media (min-width: 900px) {
-    .sobre-container {
-        flex-direction: row; /* lado a lado */
-        align-items: flex-start;
-    }
-
-    .sobre-info {
-        text-align: left;
-    }
-
-    .sobre-txt h2 {
-        text-align: left;
-    }
-}
