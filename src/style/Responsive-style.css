@@ -1,22 +1,5 @@
 @charset "UTF-8";
 
-@media (max-width: 768px) {
-    .sobre {
-        padding: 15px;
-    }
-
-    .sobre-txt h2 {
-        text-align: center;
-    }
-
-    .sobre-txt p {
-        font-size: 1em;
-    }
-
-    .sobre-card-img {
-        width: 90%;
-    }
-}
 
 @media (max-width: 480px) {
     .sobre {
@@ -41,6 +24,7 @@
 }
 
 @media (max-width: 768px) {
+
     .menu > ul {
         display: none; /* escondido por padrão */
         flex-direction: column;
@@ -61,6 +45,23 @@
     .menu-toggle {
         display: block; /* aparece só no mobile */
     }
+
+    .sobre {
+        padding: 15px;
+    }
+
+    .sobre-txt h2 {
+        text-align: center;
+    }
+
+    .sobre-txt p {
+        font-size: 1em;
+    }
+
+    .sobre-card-img {
+        width: 90%;
+    }
+}
 }
 
 
