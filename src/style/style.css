@@ -143,13 +143,14 @@ main{
     min-height: 100vh; 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px;
     box-sizing: border-box;
 }
 
 /* Sobre*/
 .on-info {
+    flex: 3;
     width: 95%;
     max-width: 100%;
     justify-content: center;
@@ -161,7 +162,7 @@ main{
     margin: auto;
     width: 100%;
     max-width: 100%;
-    height: 100%;
+    max-height: 100%;
     padding: 10px;
     backdrop-filter: blur(10px);
     border-radius: 5px;
@@ -187,14 +188,14 @@ main{
 }
 
 .on-txt-p > p {
-    font: 1.1em var(--fonte01);
-    line-height: 1em;
+    font: 1em var(--fonte01);
     text-indent: 10px;
     padding: 2px;
 }
 
 /* Card */
 .on-card {
+    flex: 7;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -205,6 +206,7 @@ main{
 .on-card-img {
     width: 95%;
     max-width: 100%;
+    height: 550px;
     max-height: 90%;
 
     backdrop-filter: blur(20px);
@@ -216,13 +218,14 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     padding: 10px;
     
 }
 
 .on-card-img > img {
-    width: 80%;
-    max-width: 250px;
+    width: 70%;
+    max-width: 300px;
     border-radius: 10px;
     border: 3px solid var(--cor04);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -260,17 +263,17 @@ main{
     box-sizing: border-box;
 }
 
-.more > .skill{
+.skill{
     width: 100%;
     height: 30vh;
 }
-.more > .skill > h3{
+.skill > h3{
     font-size: 1.4em;
     text-align: center;
     margin-bottom: 10px;
 }
 
-.more > .skill .skill-container {
+.skill-container {
     width: 100%;
     max-height: 100%;
     display: flex;
@@ -279,7 +282,7 @@ main{
     align-items: center; 
 }
 
-.more > .skill > .skill-container > .skills {
+.skill-container > .skills {
     height: 100%;
     backdrop-filter: blur(20px); 
     border: 2px solid var(--cor04); 
@@ -291,19 +294,19 @@ main{
     flex: auto; 
 }
 
-.more > .work{
+.work{
     width: 100%;
     max-width: 100%;
     height: calc(100vh - 40px - 30vh);
     margin: auto;
 }
-.more > .work > h3{
+.work > h3{
     font-size: 1.4em;
     text-align:  left;
     width: 100%;
 }
 
-.more > .work > .work-container {
+.work-container {
     margin: auto;
     margin-top: 10px;
     backdrop-filter: blur(20px);
@@ -322,7 +325,7 @@ main{
     height: 95%;
 }
 
-.more > .work > .work-container > .work-card {
+.work-card {
 
     flex: 0 0 100%; 
     height: 90%;   
@@ -338,7 +341,7 @@ main{
     object-fit: cover;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.more > .work > .work-container > .work-card:hover {
+.work-card:hover {
     transform: scale(1.03);
     box-shadow: 0 0 15px rgba(0,0,0,0.7);
 }
@@ -377,7 +380,7 @@ main{
     font-weight: bold;
 }
 
-.work-card >  a:hover {
+.work-card > a:hover {
     background-color: var(--cor02);
     box-shadow: 0px 0px 8px var(--cor02);
     transition: 0.3s;
