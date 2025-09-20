@@ -34,11 +34,12 @@ html, body{
 
 .menu {
     background-color: #000;
+    box-shadow: 1px 5px 8px var(--cor02);
     border-bottom: 3px solid var(--cor02);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px;
     position: relative;
 }
 
@@ -46,7 +47,9 @@ html, body{
     color: white;
     font: bolder 1.2em var(--fonte03);
     text-transform: uppercase;
-    margin: 0;
+    text-align: center;
+    width: 100%;
+    padding-left: 20px;
 }
 
 .menu > ul {
@@ -140,74 +143,30 @@ main{
     background: linear-gradient(to bottom, black 50vh, var(--cor02) 100vh);
     color: white;
     width: 100%;
-    min-height: 100vh; 
+    height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     padding: 20px;
     box-sizing: border-box;
 }
 
-/* Sobre*/
-.on-info {
-    flex: 3;
-    width: 95%;
-    max-width: 100%;
-    justify-content: center;
-    margin: auto;
-    display: flex; 
-}
-
-.on-txt {
-    margin: auto;
-    width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    padding: 10px;
-    backdrop-filter: blur(10px);
-    border-radius: 5px;
-    border: 1px solid var(--cor02);
-    box-shadow: 0px 0px 10px rgba(95, 95, 95, 0.658);
-}
-
-.on-txt > h2 {
-    font: 1.4em var(--fonte01);
-    color: white;
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.on-txt-p {
-   background-color: #cccccc2a;
-   border-radius: 8px;
-   color: #cccccc;
-   box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
-   text-align: justify;
-   line-height: 1em;
-   padding: 8px;
-}
-
-.on-txt-p > p {
-    font: 1em var(--fonte01);
-    text-indent: 10px;
-    padding: 2px;
-}
-
 /* Card */
 .on-card {
-    flex: 7;
+    flex: auto;
     width: 100%;
+    max-height: 50vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 10px;
+    margin-bottom: 10px;
+
 }
 
 .on-card-img {
     width: 95%;
     max-width: 100%;
-    height: 550px;
-    max-height: 90%;
 
     backdrop-filter: blur(20px);
     border-radius: 8px;
@@ -215,22 +174,25 @@ main{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
     box-sizing: border-box;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
     padding: 10px;
+
+
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: 1px solid var(--cor02);
+    box-shadow: 0px 0px 10px rgba(95, 95, 95, 0.658);
     
 }
 
 .on-card-img > img {
-    width: 70%;
-    max-width: 300px;
+    width: 80%;
+    max-width: 240px;
     border-radius: 10px;
     border: 3px solid var(--cor04);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px;
-}
+    margin: auto;
+    display: block;
+} 
 
 .on-card-img > h2 {
     font: 1.6em var(--fonte01);
@@ -247,10 +209,74 @@ main{
 
 .on-card-img > p {
     font: bold 1.4em var(--fonte01);
-    color: black;
+    color: rgba(86, 1, 94, 0.815);
     text-align: center;
     margin-top: 5px;
 }
+.skill-container {
+    width: 90%;
+    height: 5%;
+    background: linear-gradient(to right, rgba(226, 226, 226, 0.267), black ,rgba(32, 32, 32, 0.267));
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: space-around; 
+    margin: 10px auto;
+    padding: 2px;
+}
+
+.skill-container > img
+
+/* Sobre*/
+.on-info {
+    flex: auto;
+    width: 100%;
+    max-height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.on-txt {
+    width: 95%;
+    margin: auto;
+    flex: auto; 
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    border: 2px solid var(--cor05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
+    
+    
+}
+
+.on-txt > h2 {
+    font: 1.4em var(--fonte01);
+    color: white;
+    text-align: left;
+    padding-left: 6px;
+    margin: 5px;
+}
+
+.on-txt-p {
+   background-color: #5c5b5b3f;
+   border-radius: 5px;
+   color: #cccccc;
+   box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+   text-align: justify;
+   line-height: 1em;
+   padding: 5px;
+   margin: 10px;
+}
+
+.on-txt-p > p {
+    font: 1em var(--fonte01);
+    text-indent: 10px;
+    padding: 2px;
+}
+
+
 
 .more{
     background: linear-gradient(to bottom, black 50vh, var(--cor02) 100vh);
@@ -263,72 +289,11 @@ main{
     box-sizing: border-box;
 }
 
-.skill{
-    width: 100%;
-    height: 30vh;
-}
-.skill > h3{
-    font-size: 1.4em;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.skill-container {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    flex-flow: row wrap; 
-    justify-content: space-around; 
-    align-items: stretch; 
-}
-
-.skill-container > .skills {
-    max-height: 100%;
-    backdrop-filter: blur(20px); 
-    border: 1px solid var(--cor05); 
-    background-color: #4B3B52;
-    text-align: center;
-    align-items: center;
-
-    
-    flex: auto; 
-}
-
-.skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-.skills > h3 {
-    font-size: 1em;
-    color: white;
-    margin-bottom: 8px;
-}
-
-#html{
-    background: linear-gradient(to bottom, #000000 0%, #ff550c 100%);
-}
-
-#css{
-    
-    background: linear-gradient(to bottom, #000000 0%, #1572B6 100%);
-}
-
-#js{
-    background-color: #F7DF1E;
-    background: linear-gradient(to bottom, #000000 0%, #F7DF1E 100%);
-   
-}
 
 .work{
     width: 100%;
     max-width: 100%;
-    height: calc(100vh - 40px - 30vh);
+    height: 90vh ;
     margin: auto;
 }
 .work > h3{
