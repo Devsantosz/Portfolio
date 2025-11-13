@@ -14,6 +14,7 @@
     /*Monocromático*/
     --cor01:#B01BEA;
     --cor02:#943BB8;
+        --cor02a:#953bb8c7;
     --cor03:#734585;
     --cor04:#4B3B52;
     --cor05:#312D33;
@@ -25,15 +26,22 @@
 }
 
 html, body{
-    background-color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     
     width:100%;
     height:100%;
+
+    background-color: #000;
+    background-image: 
+    radial-gradient(circle at 15% 10%, var(--cor02a), transparent 15%),
+    radial-gradient(circle at 90% 50%, var(--cor02a), transparent 15%),
+    radial-gradient(circle at 20% 90%, var(--cor02a), transparent 15%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .menu {
-    background-color: #000;
+    
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -70,14 +78,16 @@ html, body{
     font: bold 1.1em var(--fonte01);
     text-decoration: none;
     text-shadow: 0px 0px 1px var(--cor01);
-    border-bottom: #af1beaa2 2px solid;~
+    border-bottom: #af1beaa2 1px solid;
+    padding-bottom: 1px;
+    transition:  0.2s ease;
 }
 
 .menu  ul  li  a:hover {
     color: #ffffff;
     text-shadow: 0px 0px 10px rgba(255, 255, 255,);
-    border-bottom: #ffffff 2px solid;
-    transition:  0.2s ease;
+    border-bottom: #ffffff 1px solid;
+    
 }
 
 .menu-toggle {
@@ -89,12 +99,12 @@ html, body{
 }
 
 main{
-    background-color: #000000;
     color: white;
+
+    
 }
 
 .home {
-    background: black;
     width: 100%;
     min-height: calc(100vh -  61px);
 
@@ -107,61 +117,57 @@ main{
     justify-items: center;
     text-align: center;
 }
-.home #saudacao {
-    margin: 20px 0;
-    width: 100%;
-    justify-content: ;
-    border: 1px solid red;
+
+#saudacao {
+    width: 80%;
+    
+}
+#saudacao h1 {
+    font-size: 1.9em;
+    color: var(--cor01);
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px rgba(231, 230, 231, 0.26);
+    max-width: 400px;
+    
+    margin: auto;
 }
 
-.home #ifoto {
-    max-width: 90%;
-    filter: drop-shadow(var(--cor03) 4px 4px 5px);
-    margin: 20px 0;
+#saudacao h2 {
+    font-size: 1.9em;
+    color: #ccc;
+    max-width: 100%;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.192);
+    margin: auto;
 
     
 }
 
+#ifoto {
+    max-width: 65%;
+    margin: 20px;
+}
+
 .home #ifoto img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 
-    border: 2px solid green;
+    
 }
 
-.home h1 {
-    font-size: 1.8em;
-    color: var(--cor01);
-    text-transform: uppercase;
-    text-shadow: 3px 3px 10px rgba(231, 230, 231, 0.26);
-    margin-bottom: 10px;
-    max-width: 100%;
-    width: 400px;
-border: 2px solid green;
-}
 
-.home h2 {
-    width: 100%;
-    font-size: 1.8em;
-    color: #ccc;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.192);
-    margin-bottom: 5px;
 
-    border: 2px solid green;
-}
 
-.home p {
+
+#welcome p {
     color: #ccc;
     font: 600 1.6em var(--fonte03);
     text-shadow: 3px 3px 10px rgba(128, 128, 128, 0.096); 
-    max-width: 420px;
-    margin-top: 20px;
+    max-width: 400px;
 
-    border: 2px solid green;
+   
 }
 
 .on {
-    background: linear-gradient(to bottom, black 50vh, var(--cor02) 100vh);
     color: white;
     width: 100%;
     height: 100vh; 
