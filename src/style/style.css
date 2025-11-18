@@ -31,23 +31,17 @@ html, body{
     width:100%;
     height:100%;
 
-    background-color: #000;
-    background-image: 
-    radial-gradient(circle at 15% 10%, var(--cor02a), transparent 10%),
-    radial-gradient(circle at 90% 50%, var(--cor02a), transparent 15%),
-    radial-gradient(circle at 20% 90%, var(--cor02a), transparent 10%);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
 
 .menu {
-    
     display: flex;
     flex-flow: column;
     align-items: center;
     gap: 5px;
+
+    background-color: black;
     
 }
 
@@ -89,24 +83,19 @@ html, body{
     color: #ffffff;
     text-shadow: 0px 0px 10px rgba(255, 255, 255,);
     border-bottom: #ffffff 1px solid;
-    
-}
-
-.menu-toggle {
-    text-align: end;
-    display: none;
-    font-size: 1.5em;
-    color: white;
     cursor: pointer;
+    
 }
 
 main{
     color: white;
-
-    
+    width: 100%;
+    min-height: calc(100vh - 61px);
 }
 
-.home {
+/* Welcome Section */
+
+.welcome {
     width: 100%;
     min-height: calc(100vh -  61px);
 
@@ -118,13 +107,21 @@ main{
     
     justify-items: center;
     text-align: center;
+
+    background-color: #000;
+    background-image: 
+    radial-gradient(circle at 15% 10%, var(--cor02a), transparent 10%),
+    radial-gradient(circle at 90% 50%, var(--cor02a), transparent 15%),
+    radial-gradient(circle at 15% 90%, var(--cor02a), transparent 10%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#saudacao {
-    width: 80%;
-    
+.saudacao {
+    width: 100%;
 }
-#saudacao h1 {
+
+.saudacao > h1 {
     font-size: 1.9em;
     color: var(--cor01);
     text-transform: uppercase;
@@ -134,7 +131,7 @@ main{
     margin: auto;
 }
 
-#saudacao h2 {
+.saudacao > h2 {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.192);
     font-size: 1.9em;
     color: #ccc;
@@ -149,22 +146,24 @@ main{
     margin: 20px;
 }
 
-.home #ifoto img {
+.welcome #ifoto img {
     max-width: 100%;
     height: auto;
 
     
 }
-#welcome {
+.p-info {
     width: 80%;
     margin: auto;
 }
-#welcome p {
+.p-info > p {
     color: #ccc;
     font: 600 1.6em var(--fonte03);
     text-shadow: 3px 3px 10px rgba(128, 128, 128, 0.096); 
     max-width: 400px;
 }
+
+/* On Section - description */
 
 .on {
     width: 100%;
@@ -172,50 +171,33 @@ main{
 
     display:grid;
     grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto;
     align-content: space-around;
+    align-items: center;
+    justify-items: center;
 
     
     background-color: #000;
     background-image: 
-    radial-gradient(circle at 15% 10%, var(--cor02a), transparent 10%),
-    radial-gradient(circle at 90% 50%, var(--cor02a), transparent 15%),
-    radial-gradient(circle at 20% 90%, var(--cor02a), transparent 10%);
+    radial-gradient(circle at 90% 10%, var(--cor02a), transparent 10%),
+    radial-gradient(circle at 15% 50%, var(--cor02a), transparent 15%),
+    radial-gradient(circle at 90% 90%, var(--cor02a), transparent 10%);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 
 
-/* Card */
-.on-card {
-    width: 100%;
-    max-height: 50vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 10px;
-
-}
 
 .on-card-img {
-    width: 95%;
-    max-width: 100%;
-
-    backdrop-filter: blur(20px);
-    border-radius: 8px;
-    border: 2px solid var(--cor05);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
-    box-sizing: border-box;
+    width: 100%;
+    max-width: 85%;
 
     padding: 10px;
-
-
-    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    backdrop-filter: blur(25px);
     border-radius: 5px;
-    border: 1px solid var(--cor02);
-    box-shadow: 0px 0px 10px rgba(95, 95, 95, 0.658);
-    
+    border: 1px solid var(--cor02); 
 }
 
 .on-card-img > img {
@@ -247,36 +229,29 @@ main{
     text-align: center;
     margin-top: 5px;
 }
+
 .skill-container {
     width: 90%;
     height: 5%;
-    background: linear-gradient(to right, rgba(226, 226, 226, 0.267), black ,rgba(32, 32, 32, 0.267));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(32, 32, 32, 0.671) ,rgba(0, 0, 0, 0));
     display: flex;
     flex-flow: row wrap; 
     justify-content: space-around; 
-    margin: 10px auto;
+    margin: auto;
     padding: 2px;
-}
 
-.skill-container > img
+}
+.skill-container > img {
+    height: 100%;
+}
 
 /* Sobre*/
-.on-info {
-    flex: auto;
-    width: 100%;
-    max-height: 50vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-
-}
 
 .on-txt {
-    width: 95%;
+    width: 100%;
+    max-width: 85%;
     margin: auto;
-    flex: auto; 
+    
     backdrop-filter: blur(20px);
     border-radius: 8px;
     border: 2px solid var(--cor05);
