@@ -42,7 +42,7 @@ html, body{
     gap: 5px;
 
     background-color: black;
-    
+    padding-bottom: 5px;
 }
 
 .menu  h2 {
@@ -97,15 +97,14 @@ main{
 
 .welcome {
     width: 100%;
-    min-height: calc(100vh -  61px);
+    min-height: calc(100vh -  66px);
 
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+
+    grid-template: auto auto;
     justify-content: center;
-    align-content: space-evenly;
     
-    justify-items: center;
+    place-items: center center;
     text-align: center;
 
     background-color: #000;
@@ -173,9 +172,10 @@ main{
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     align-content: space-around;
-    align-items: center;
-    justify-items: center;
 
+    place-items: center center;
+
+    
     
     background-color: #000;
     background-image: 
@@ -190,8 +190,7 @@ main{
 
 
 .on-card-img {
-    width: 100%;
-    max-width: 85%;
+    width: 90%;
 
     padding: 10px;
     box-sizing: border-box;
@@ -248,15 +247,12 @@ main{
 /* Sobre*/
 
 .on-txt {
-    width: 100%;
-    max-width: 85%;
-    margin: auto;
+    width: 90%;
     
     backdrop-filter: blur(20px);
     border-radius: 8px;
     border: 2px solid var(--cor05);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
-    
     
 }
 
