@@ -50,8 +50,7 @@ html, body{
     font: bolder 1.2em var(--fonte03);
     text-transform: uppercase;
 
-    padding-top: 10px;
-    width:  calc(100% - 22px);
+    padding-top: 12px;
     text-align: center;
 }
 
@@ -74,15 +73,15 @@ html, body{
     font: bold 1.1em var(--fonte01);
     text-decoration: none;
     text-shadow: 0px 0px 1px var(--cor01);
-    border-bottom: #af1beaa2 1px solid;
-    padding-bottom: 1px;
-    transition:  0.2s ease;
+    
+    padding-bottom: 2px;
+    transition:  0.3s ease;
 }
 
 .menu  ul  li  a:hover {
     color: #ffffff;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255,);
-    border-bottom: #ffffff 1px solid;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.534);
+    border-bottom: #fffffff3 1px solid;
     cursor: pointer;
     
 }
@@ -90,19 +89,18 @@ html, body{
 main{
     color: white;
     width: 100%;
-    min-height: calc(100vh - 61px);
 }
 
 /* Welcome Section */
 
 .welcome {
     width: 100%;
-    min-height: calc(100vh -  66px);
+    min-height: calc(100vh -  68px);
 
     display: grid;
 
     grid-template: auto auto;
-    justify-content: center;
+    place-content: center center;
     
     place-items: center center;
     text-align: center;
@@ -169,13 +167,14 @@ main{
     height: 100vh; 
 
     display:grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    align-content: space-around;
+    grid-template-columns: auto ;
+    grid-template-rows: 3fr 2fr 1fr;
+
+    align-content: center;
+    justify-content: center;
 
     place-items: center center;
 
-    
     
     background-color: #000;
     background-image: 
@@ -193,10 +192,12 @@ main{
     width: 90%;
 
     padding: 10px;
+    box-shadow: 4px 4px 0px #af1bea91;
     box-sizing: border-box;
     backdrop-filter: blur(25px);
+
     border-radius: 5px;
-    border: 1px solid var(--cor02); 
+    border: 1px solid var(--cor01); 
 }
 
 .on-card-img > img {
@@ -224,24 +225,21 @@ main{
 
 .on-card-img > p {
     font: bold 1.4em var(--fonte01);
-    color: rgba(86, 1, 94, 0.815);
+    color: rgba(190, 1, 207, 0.815);
     text-align: center;
     margin-top: 5px;
 }
 
 .skill-container {
-    width: 90%;
+    width: 80%;
     height: 5%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(32, 32, 32, 0.671) ,rgba(0, 0, 0, 0));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(24, 23, 23, 0.486) ,rgba(0, 0, 0, 0));
     display: flex;
     flex-flow: row wrap; 
     justify-content: space-around; 
-    margin: auto;
+    margin: 5px auto;
     padding: 2px;
 
-}
-.skill-container > img {
-    height: 100%;
 }
 
 /* Sobre*/
@@ -253,6 +251,7 @@ main{
     border-radius: 8px;
     border: 2px solid var(--cor05);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 4px 4px 0px rgba(82, 82, 82, 0.342);
     
 }
 
@@ -281,7 +280,10 @@ main{
     padding: 2px;
 }
 
-
+.on > iframe{
+    height: 80px;
+    box-shadow: 5px 5px 0px rgba(122, 0, 179, 0.425);
+}
 
 .more{
     background: linear-gradient(to bottom, black 50vh, var(--cor02) 100vh);
