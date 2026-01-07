@@ -38,24 +38,11 @@ header h2 {
 }
 
 nav {
-    background-color: #222;
-    
     width: 92%;
     border-radius: 10px;
     padding: 10px ;
     margin: auto;
 
-    box-shadow: 4px 4px 5px rgba(255, 253, 253, 0.082);
-
-  background:
-    repeating-linear-gradient(
-      180deg,
-      rgba(176, 27, 234, 0.2),
-      rgba(176, 27, 234, 0.2) 10px,
-      transparent 10px,
-      transparent 20px
-    );
-  animation: move 8s linear infinite;
 }
 
 nav ul {
@@ -76,23 +63,72 @@ nav a {
     font-weight: bold;
 }
 nav a:hover {
-    color: rgb(209, 72, 209);
-    transition: 0.5s ease;
+    color: #6b009c;
+    transition: 0.6s ease;
+    border-bottom:  #6b009c 2px solid;
 }
 
-@keyframes move {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 200px 200px;
-  }
-}
+
 
 .main-aside {
-    margin: auto;
-    width: 90%;
-    height: calc(100vh - 115px);
+    width: 100%;
+    height: calc(100vh - 102px);
+    background-color: #000;
+
+    background-image:
+        radial-gradient(circle, rgba(176, 27, 234, 0.45) 2px, transparent 60px),
+        radial-gradient(circle, rgba(148, 59, 184, 0.35) 3px, transparent 80px),
+        radial-gradient(circle, rgba(176, 27, 234, 0.25) 2px, transparent 70px),
+        radial-gradient(circle, rgba(148, 59, 184, 0.40) 4px, transparent 90px),
+        radial-gradient(circle, rgba(176, 27, 234, 0.30) 3px, transparent 85px),
+        radial-gradient(circle, rgba(148, 59, 184, 0.20) 2px, transparent 65px);
+
+    background-repeat: no-repeat;
+
+    background-position:
+        10% 110%,
+        30% 120%,
+        50% 130%,
+        70% 115%,
+        85% 125%,
+        95% 140%;
+
+    animation:
+        particles 30s linear infinite,
+        drift 12s ease-in-out infinite alternate;
+}
+
+
+@keyframes drift {
+    from {
+        filter: blur(0px);
+    }
+    to {
+        filter: blur(1.2px);
+    }
+}
+
+
+@keyframes particles {
+    0% {
+        background-position:
+            10% 110%,
+            30% 120%,
+            50% 130%,
+            70% 115%,
+            85% 125%,
+            95% 140%;
+    }
+
+    100% {
+        background-position:
+            15% -20%,
+            35% -30%,
+            55% -25%,
+            75% -40%,
+            90% -35%,
+            100% -50%;
+    }
 }
 
 aside h1 {
@@ -112,13 +148,11 @@ aside p {
     width: 80%;
     text-align: center;   
     font-size: clamp(1rem, 2.5vw, 1.1rem);
-    line-height: 1.6fem;
+    line-height: 1.6em;
 }
 
 .main-home{
-    background-color: #111;
-    box-shadow: 4px 4px 5px rgba(255, 253, 253, 0.103);
-    border-radius: 10px;
+
     color: white;
 
     display: grid;
@@ -129,7 +163,7 @@ aside p {
     align-items: center;
 
     margin: auto;
-    
+    width: 87%;
     height: 100%;
     
 }
