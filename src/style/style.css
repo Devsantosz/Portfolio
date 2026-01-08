@@ -17,39 +17,32 @@ body {
 
 
 
-html, body {
+body {
     height: 100%;
+    display: grid;
+    grid-template: auto auto 1fr / 1fr;
 }
 
 
 header {
     color: white;
-    padding: 10px;
     text-align: center;
     width: 100%;
     margin: auto;
-}
-
-header h2 {
-    font-family: "Saira", sans-serif;
-    color: #6b009c;
-   font-size: 1.8rem;
-   
+    background-color: #6b009c;
 }
 
 nav {
-    width: 92%;
-    border-radius: 10px;
     padding: 10px ;
+    width: 90%;
     margin: auto;
-
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: flex-end;
     gap: 12px;
 }
 
@@ -189,23 +182,6 @@ aside img {
     width: 230px;
 }
 
-article {
-    background-color: #111;
-    border-radius: 10px;
-    color: white;
-
-    display: grid;
-    grid-template: auto / auto;
-
-    
-    justify-items: center;
-    align-items: center;
-
-    margin: 10px auto ;
-    
-    width: 90%;
-    height: 100vh;
-}
 
 
 
