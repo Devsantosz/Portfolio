@@ -30,11 +30,15 @@ header {
     width: 100%;
     margin: auto;
     background-color: #6b009c;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 nav {
     padding: 10px ;
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
@@ -42,87 +46,40 @@ nav ul {
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
-    gap: 12px;
+    justify-content: center;
+    gap: 15px;
 }
 
 nav li{
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 3px;
 }
 nav a:hover {
-    color: #6b009c;
+    background-color: rgba(255, 255, 255, 0.692);
+    border-radius: 5px;
+    color: #ae00ff;
     transition: 0.6s ease;
-    border-bottom:  #6b009c 2px solid;
+    
 }
 
 
 
 .main-aside {
     width: 100%;
-    height: calc(100vh - 102px);
+    height: calc(100vh - 42px);
     background-color: #000;
-
-    background-image:
-        radial-gradient(circle, rgba(176, 27, 234, 0.45) 2px, transparent 60px),
-        radial-gradient(circle, rgba(148, 59, 184, 0.35) 3px, transparent 80px),
-        radial-gradient(circle, rgba(176, 27, 234, 0.25) 2px, transparent 70px),
-        radial-gradient(circle, rgba(148, 59, 184, 0.40) 4px, transparent 90px),
-        radial-gradient(circle, rgba(176, 27, 234, 0.30) 3px, transparent 85px),
-        radial-gradient(circle, rgba(148, 59, 184, 0.20) 2px, transparent 65px);
-
-    background-repeat: no-repeat;
-
-    background-position:
-        10% 110%,
-        30% 120%,
-        50% 130%,
-        70% 115%,
-        85% 125%,
-        95% 140%;
-
-    animation:
-        particles 30s linear infinite,
-        drift 12s ease-in-out infinite alternate;
 }
 
-
-@keyframes drift {
-    from {
-        filter: blur(0px);
-    }
-    to {
-        filter: blur(1.2px);
-    }
+main-icone{
+    height: 100%;
 }
 
-
-@keyframes particles {
-    0% {
-        background-position:
-            10% 110%,
-            30% 120%,
-            50% 130%,
-            70% 115%,
-            85% 125%,
-            95% 140%;
-    }
-
-    100% {
-        background-position:
-            15% -20%,
-            35% -30%,
-            55% -25%,
-            75% -40%,
-            90% -35%,
-            100% -50%;
-    }
-}
 
 aside h1 {
     text-align: center;
@@ -180,6 +137,11 @@ aside img {
 
     max-width: 100%;
     width: 230px;
+}
+
+article{
+    background-color: white;
+    height: 100vh;
 }
 
 
