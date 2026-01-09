@@ -65,7 +65,7 @@ nav a:hover {
     border-radius: 5px;
     color: #ae00ff;
     transition: 0.6s ease;
-    
+    cursor: pointer;
 }
 
 
@@ -73,32 +73,113 @@ nav a:hover {
 .main-aside {
     width: 100%;
     height: calc(100vh - 42px);
-    background-color: #000;
 }
 
-main-icone{
+.space {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 42px);
+    overflow: hidden;
+
+    /* estrelas fixas */
+    background-image:
+        radial-gradient(1px 1px at 20% 30%, rgba(176, 27, 234, 0.45), transparent),
+        radial-gradient(1px 1px at 80% 20%,rgba(176, 27, 234, 0.45), transparent),
+        radial-gradient(1px 1px at 50% 60%, rgba(176, 27, 234, 0.45), transparent),
+        radial-gradient(1px 1px at 70% 80%, rgba(176, 27, 234, 0.45), transparent),
+        radial-gradient(1px 1px at 10% 70%, rgba(176, 27, 234, 0.45), transparent);
+    background-size: 100% 100%;
+}
+
+/* estrela cadente */
+.shooting-star {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(
+        -45deg,
+        rgba(176, 27, 234, 0.45),
+        rgba(255,255,255,0)
+    );
+    opacity: 0;
+    transform: rotate(-45deg);
+    animation: shoot 6s linear infinite;
+}
+
+/* variação automática */
+.shooting-star:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.shooting-star:nth-child(2) {
+    top: 30%;
+    left: 60%;
+    animation-delay: 2s;
+}
+
+.shooting-star:nth-child(3) {
+    top: 50%;
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.shooting-star:nth-child(4) {
+    top: 70%;
+    left: 80%;
+    animation-delay: 6s;
+}
+
+@keyframes shoot {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(-45deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-600px, 600px) rotate(-45deg);
+    }
+}
+
+
+.main-icone{
     height: 100%;
+    box-sizing: border-box;
 }
 
-
-aside h1 {
-    text-align: center;
+.main-icone img{
+    position: relative;
+    height: 100%;
     
 }
 
-aside h1 #dev{
+
+.main-aside h1 {
+    text-align: center;
+    position: relative;
+    
+}
+
+.main-aside h1 #dev{
    color: #6b009c;
    
    font-family: "Saira", sans-serif;
-text-transform: uppercase;
+    text-transform: uppercase;
 }
 
-aside p {
+.main-aside p {
     margin: auto;
-    width: 80%;
+    width: 90%;
     text-align: center;   
-    font-size: clamp(1rem, 2.5vw, 1.1rem);
-    line-height: 1.6em;
+    font-size: clamp(1.1rem, 2.5vw, 1.1rem);
+    line-height: 1.2em;
+    position: relative;
 }
 
 .main-home{
@@ -113,22 +194,25 @@ aside p {
     align-items: center;
 
     margin: auto;
-    width: 87%;
+    width: 100%;
     height: 100%;
     
 }
 
 
 #html{
-    color: rgba(255, 166, 0, 0.76);
+    color: rgba(255, 166, 0, 0.644);
+    font-size: 1.3em;
 }
 
 #css{
-    color: rgb(0, 0, 255);
+    color: rgba(0, 0, 255, 0.671);
+    font-size: 1.3em;
 }
 
 #python{
-    color: rgb(255, 255, 0);
+    color: rgba(255, 255, 0, 0.705);
+    font-size: 1.3em;
 }
 
 aside img {
