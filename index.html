@@ -13,7 +13,7 @@
     <header class="header">
         <nav class="nav-menu">
             <ul>
-                <li><a href="#main-aside" target="_blank"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#main-aside"><i class="fa-solid fa-house"></i></a></li>
                 <li><a href="#aboutme" ><i class="fa-solid fa-user"></i></a></li>
                 <li><a href="#services"><i class="fa-solid fa-code-branch"></i></a></li>
                 <li><a href="#projects"><i class="fa-solid fa-hammer"></i></a></li>
@@ -23,7 +23,7 @@
     </header>
     <main>
 
-        <aside class="main-aside">
+        <aside class="main-aside" id="main-aside">
             <div class="space">
                 <span class="shooting-star"></span>
                 <span class="shooting-star"></span>
@@ -33,22 +33,52 @@
             <div class="main-home">
                 <section id="main-welcome">
                     <h1>Bem-vindo ao <span id="dev">Devsantosz</span></h1>
-                    <p>Seu parceiro em desenvolvimento web e soluções digitais.</p>
+                    <p class="welcome-p">Seu parceiro em desenvolvimento web e soluções digitais.</p>
                 </section>
                 <section class="main-icone">
                     <img src="src/image/minidev.png" alt="Ícone do Devsantosz">
                 </section>
                 <section class="main-info">
                 
-                    <p>
-                        Guilherme Luz Santos (Devsantosz) 💻 Desenvolvedor Web  <br> <span id="html"><i class="fa-brands fa-html5"></i></span> • <span id="css"><i class="fa-brands fa-css3-alt"></i></span> • <span id="python"><i class="fa-brands fa-python"></i></span> 
+                    <p class="info-p">
+                        Guilherme Luz Dos Santos <br> Desenvolvedor Web  <br> <span id="html"><i class="fa-brands fa-html5"></i></span> • <span id="css"><i class="fa-brands fa-css3-alt"></i></span> • <span id="python"><i class="fa-brands fa-python"></i></span> 
                     </p>
                 </section>
             </div> 
         </aside>
 
-        <article>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis dolores repellendus facilis in praesentium perspiciatis pariatur commodi dolore eaque debitis asperiores nam, nostrum aspernatur magnam eveniet dolorum dignissimos hic?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat eius dignissimos aperiam dolores accusamus, ex deleniti asperiores ea, nam sed hic vitae quis odio perspiciatis similique. Quis repudiandae quidem exercitationem!</p>
+        <article class="aboutme" id="aboutme">
+            <section class="aboutme-container">
+
+                <h2 class="aboutme-title"><i class="fa-solid fa-user"></i>Sobre-mim</h2>
+
+                <div class="aboutme-content">
+                    <div class="aboutme-text">
+                        <h3>Guilherme Luz </h3>
+                        <img src="src/image/minidev.png" alt="">
+                        <span class="aboutme-role">Desenvolvedor Web</span>
+
+                        <p>
+                            Sou desenvolvedor web apaixonado por tecnologia e criação de interfaces modernas.
+                            Tenho foco em desenvolvimento front-end, sempre buscando unir design, performance
+                            e boas práticas para criar experiências digitais eficientes e agradáveis.
+                        </p>
+
+                        <ul class="aboutme-info">
+                            <li><strong>Área:</strong> Desenvolvimento Web</li>
+                            <li><strong>Tecnologias:</strong> HTML, CSS, Python</li>
+                            <li><strong>Objetivo:</strong> Evoluir como desenvolvedor e criar soluções digitais de impacto</li>
+                        </ul>
+                    </div>
+
+                    <div class="aboutme-icons">
+                        <span id="html"><i class="fa-brands fa-html5"></i></span>
+                        <span id="css"><i class="fa-brands fa-css3-alt"></i></span>
+                        <span id="python"><i class="fa-brands fa-python"></i></span>
+                    </div>
+                </div>
+
+            </section>
         </article>
         
     </main>

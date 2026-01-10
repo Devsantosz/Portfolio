@@ -100,8 +100,9 @@ nav a:hover {
     height: 2px;
     background: linear-gradient(
         -45deg,
-        rgba(176, 27, 234, 0.45),
-        rgba(255,255,255,0)
+        rgba(255,255,255,0),
+        rgba(175, 27, 234, 0.822)
+        
     );
     opacity: 0;
     transform: rotate(-45deg);
@@ -150,36 +151,51 @@ nav a:hover {
 
 .main-icone{
     height: 100%;
-    box-sizing: border-box;
 }
 
 .main-icone img{
     position: relative;
-    height: 100%;
-    
+    width: 80%;
 }
 
 
 .main-aside h1 {
-    text-align: center;
+    margin: auto;
     position: relative;
-    
+
+    width: 80%;
+
+    text-align: center;
+    font-size: clamp(1.7em, 22.5vw);
+    line-height: 1em;
 }
 
 .main-aside h1 #dev{
-   color: #6b009c;
-   
-   font-family: "Saira", sans-serif;
+    color: #6b009c;
+
+    font-family: "Saira", sans-serif;
     text-transform: uppercase;
 }
 
 .main-aside p {
     margin: auto;
-    width: 90%;
     text-align: center;   
     font-size: clamp(1.1rem, 2.5vw, 1.1rem);
     line-height: 1.2em;
     position: relative;
+}
+
+.main-aside .welcome-p{
+    width: 80%;
+    padding: 10px;
+    line-height: 1em;
+    font-size: clamp(1.4rem, 2.5vw, 1.1rem);
+}
+
+.main-aside .info-p{
+    width: 100%;
+    line-height: 1.2em;
+    font-size: clamp(1.2rem, 2.5vw, 1.1rem);
 }
 
 .main-home{
@@ -223,12 +239,97 @@ aside img {
     width: 230px;
 }
 
-article{
-    background-color: white;
-    height: 100vh;
+.aboutme {
+    background-color: #000000;
+    color: #333;
+    height: 100vw;
 }
 
+.aboutme-container {
+    width: 100%;
+    text-align: center;
+}
 
+.aboutme-title {
+    text-align: left;
+    font-size: clamp(1.7rem, 4vw, 2.8rem);
+    color: #6b009c;
+    margin-bottom: 10px;
+    font-family: "Saira", sans-serif;
+}
+
+.aboutme-content {
+    display: grid;
+    margin: auto;
+
+    justify-content: space-around;
+    align-items: center;
+    
+    height: calc(100vh - 103px);
+}
+
+.aboutme-text{
+    width: 100%;
+    display: grid;
+    margin: auto;
+
+    justify-content: center;
+    align-content: center;
+
+    align-items: center;
+    justify-items: center; 
+}
+
+.aboutme-text img{
+    width: 80%;
+    max-width: 140px;
+}
+
+.aboutme-text h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.aboutme-role {
+    display: block;
+    font-size: 1.1rem;
+    color: #6b009c;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+    
+}
+
+.aboutme-text p {
+    width: 90%;
+
+    text-indent: 10px;
+    text-align: justify;
+    color: rgb(172, 168, 168);
+    font-size: 1rem;
+    line-height: 1.3em;
+    margin: 10px auto;
+}
+
+.aboutme-info {
+    list-style: none;
+    padding: 0;
+}
+
+.aboutme-info li {
+    margin: auto;
+    width: 80%;
+    font-size: 1rem;
+}
+
+.aboutme-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 2rem;
+    
+}
 
 
 
