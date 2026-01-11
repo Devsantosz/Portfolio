@@ -293,7 +293,7 @@ aside img {
 
 .aboutme-role {
     display: block;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     color: #6b009c;
     margin-bottom: 20px;
     font-weight: bold;
@@ -320,7 +320,7 @@ aside img {
 .aboutme-info li {
     margin: auto;
     width: 80%;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .aboutme-icons {
