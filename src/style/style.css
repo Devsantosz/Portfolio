@@ -21,6 +21,7 @@
   --destaque: #A615EA;
   --destaque-inverso: #8E35B8;
   --fundo-card: #e2e2e2;
+  --text-hover: #eeff00fa;
 }
 
 body{
@@ -34,7 +35,7 @@ body{
 body.escuro{
   --fundo-principal:#222222;
   --texto: #e0e0e0;
-  --texto-inverso: #333333;
+  --texto-inverso: #ffffff;
   --destaque: #A615EA;
   --destaque-inverso: #8E35B8;
   --fundo-card: rgba(102, 101, 101, 0.067);
@@ -274,7 +275,7 @@ footer a{
   font-weight: bold;
 }
 footer a:hover{
-  color: var(--destaque-inverso);
+  color: var(--text-hover);
   text-decoration: underline;
 }
 
