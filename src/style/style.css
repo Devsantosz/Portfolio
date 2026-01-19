@@ -24,6 +24,11 @@
   --text-hover: #eeff00fa;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5em;
