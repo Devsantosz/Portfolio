@@ -18,8 +18,8 @@
   --fundo-principal: #f5f5ff;
   --texto: #070707;
   --texto-inverso: #ffffff;
-  --destaque: #A615EA;
-  --destaque-inverso: #8E35B8;
+  --destaque: #ae00ff;
+  --destaque-inverso: #430361;
   --fundo-card: #e2e2e2;
   --text-hover: #eeff00fa;
 }
@@ -74,7 +74,7 @@ nav#menu a{
 }
 
 nav#menu a:hover{
-  background-color: var(--destaque-inverso);
+  background-color: var(--texto-inverso);
   color: var(--destaque);
 }
 
