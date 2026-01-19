@@ -18,12 +18,12 @@
   --fundo-principal: #f5f5ff;
   --texto: #070707;
   --texto-inverso: #ffffff;
-  --destaque: #ae00ff;
+  --destaque: #430361;
   --destaque-inverso: #430361;
   --fundo-card: #e2e2e2;
   --text-hover: #eeff00fa;
 }
-
+#ae00ff
 html, body {
   width: 100%;
   height: 100%;
