@@ -1,89 +1,270 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="src/image/logo.ico.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/style/style.css" >
-    <link rel="stylesheet" href="src/style/Responsive-style.css">
+    <title>Portfólio Devsantosz</title>
+    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <script src="https://kit.fontawesome.com/0be98ff33e.js" crossorigin="anonymous"></script>
-    <title>Devsantosz</title>
 </head>
-<body>
-    <header class="header">
-        <nav class="nav-menu">
+<body class="escuro">
+    <header>
+        <nav id="menu">
             <ul>
-                <li><a href="#main-aside"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="#aboutme" ><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="#services"><i class="fa-solid fa-code-branch"></i></a></li>
-                <li><a href="#projects"><i class="fa-solid fa-hammer"></i></a></li>
-                <li><a href="#contact"><i class="fa-solid fa-phone"></i></a></li>
+                <li><a href="#video" class="link"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#skills" class="link"><i class="fa-solid fa-brain"></i></a></li>
+                <li><a href="#formacao" class="link"><i class="fa-solid fa-graduation-cap"></i></a></li>
+                <li><a href="#projetos" class="link"><i class="fa-solid fa-trowel-bricks"></i></a></li>
+                <li><a href="#" class="link" id="botao-tema"><i class="fa-solid fa-moon"></i></a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-
-        <aside class="main-aside" id="main-aside">
-            <div class="space">
-                <span class="shooting-star"></span>
-                <span class="shooting-star"></span>
-                <span class="shooting-star"></span>
-                <span class="shooting-star"></span>
+     <section id="ficha">
+        <img src="src/image/minidev.png" alt="gustavoguanabara" class="foto">
+        <h1> 
+            Guilherme Luz
+        </h1>
+        <p>
+            Olá, eu sou Guilherme Luz! Desenvolvedor Web Júnior e estou atualmente estudando para me tornar um Desenvolvedor Python.
+        </p>
+        <div id="social">
+            <a href="https://br.linkedin.com/in/guanabara" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/gustavoguanabara" target="_blank" rel="nofollow"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.youtube.com/@tvguanabarainfo" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.instagram.com/gustavoguanabara/" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.cursoemvideo.com/sobre/" target="_blank" rel="nofollow"><i class="fa-solid fa-globe"></i></a>
+        </div>
+     </section>
+     <section id="detalhes">
+        <article id="video">
+            <h2><i class="fa-solid fa-handshake"></i>Deixe-me apresentar</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/990p-Tuw0TY?si=uk8i6cmsJ-ijWWdn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <div class="main-home">
-                <section id="main-welcome">
-                    <h1>Bem-vindo ao <span id="dev">Devsantosz</span></h1>
-                    <p class="welcome-p">Seu parceiro em desenvolvimento web e soluções digitais.</p>
-                </section>
-                <section class="main-icone">
-                    <img src="src/image/minidev.png" alt="Ícone do Devsantosz">
-                </section>
-                <section class="main-info">
-                
-                    <p class="info-p">
-                        Guilherme Luz Dos Santos <br> Desenvolvedor Web  <br> <span id="html"><i class="fa-brands fa-html5"></i></span> • <span id="css"><i class="fa-brands fa-css3-alt"></i></span> • <span id="python"><i class="fa-brands fa-python"></i></span> 
-                    </p>
-                </section>
-            </div> 
-        </aside>
+        </article> <!---Fim article#video-->
+        <article id="skills">
+            <h2><i class="fa-solid fa-brain"></i>Minhas Skills</h2>
+                <div id="skill-container">
+                    <div id="item">
+                        <div class="info">
+                            <span class="nome">
+                                <i class="fa-solid fa-code"></i> HTML5
+                            </span>
+                            <span class="porcent">
+                                90%
+                            </span>
+                        </div>
+                        <div class="barra" >
+                            <div class="progresso" style="width: 90%;">
 
-        <article class="aboutme" id="aboutme">
-            <section class="aboutme-container">
-
-                <h2 class="aboutme-title"><i class="fa-solid fa-user"></i>Sobre-mim</h2>
-
-                <div class="aboutme-content">
-                    <div class="aboutme-text">
-                        <h3>Guilherme Luz </h3>
-                        <img src="src/image/minidev.png" alt="">
-                        <span class="aboutme-role">Desenvolvedor Web</span>
-
-                        <p>
-                            Sou desenvolvedor web apaixonado por tecnologia e criação de interfaces modernas.
-                            Tenho foco em desenvolvimento front-end, sempre buscando unir design, performance
-                            e boas práticas para criar experiências digitais eficientes e agradáveis.
-                        </p>
-
-                        <ul class="aboutme-info">
-                            <li><strong>Área:</strong> Desenvolvimento Web</li>
-                            <li><strong>Tecnologias:</strong> HTML, CSS, Python</li>
-                            <li><strong>Objetivo:</strong> Evoluir como desenvolvedor e criar soluções digitais de impacto</li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
+                    <div id="item">
+                        <div class="info">
+                            <span class="nome">
+                                <i class="fa-solid fa-code"></i> CSS3
+                            </span>
+                            <span class="porcent">
+                                70%
+                            </span>
+                        </div>
+                        <div class="barra" >
+                            <div class="progresso" style="width: 70%;">
 
-                    <div class="aboutme-icons">
-                        <span id="html"><i class="fa-brands fa-html5"></i></span>
-                        <span id="css"><i class="fa-brands fa-css3-alt"></i></span>
-                        <span id="python"><i class="fa-brands fa-python"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item">
+                        <div class="info">
+                            <span class="nome">
+                                <i class="fa-solid fa-code"></i> JavaScript
+                            </span>
+                            <span class="porcent">
+                                50%
+                            </span>
+                        </div>
+                        <div class="barra" >
+                            <div class="progresso" style="width: 50%;">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item">
+                        <div class="info">
+                            <span class="nome">
+                                <i class="fa-solid fa-code"></i> Python
+                            </span>
+                            <span class="porcent">
+                                80%
+                            </span>
+                        </div>
+                        <div class="barra" >
+                            <div class="progresso" style="width: 80%;">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item">
+                        <div class="info">
+                            <span class="nome">
+                                <i class="fa-solid fa-lightbulb"></i>Comunicação
+                            </span>
+                            <span class="porcent">
+                                85%
+                            </span>
+                        </div>
+                        <div class="barra" >
+                            <div class="progresso" style="width: 85%;">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item">
+                        <div class="info">
+                            <span class="nome">
+                                <i class="fa-solid fa-lightbulb"></i>Aprendizado Contínuo
+                            </span>
+                            <span class="porcent">
+                                100%
+                            </span>
+                        </div>
+                        <div class="barra" >
+                            <div class="progresso" style="width: 100%">
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+        </article><!---Fim article#skills-->
+        <article id="formacao">
+            <h2><i class="fa-solid fa-graduation-cap"></i>Formação/Cursos</h2>
+            <div id="formacao-container">
+                <div class="curso">
+                    <p class="perido">
+                        2026
+                    </p>
+                    <h3 class="instituicao">
+                        Fundação Bradesco
+                    </h3>
+                    <p class="titulacao">
+                        Curso de Python
+                    </p>
+                </div>
+                <div class="curso">
+                    <p class="perido">
+                        2026
+                    </p>
+                    <h3 class="instituicao">
+                        Curso em Video
+                    </h3>
+                    <p class="titulacao">
+                        Curso de HTML5 e CSS3
+                    </p>
+                </div>
+                <div class="curso">
+                    <p class="perido">
+                        2025
+                    </p>
+                    <h3 class="instituicao">
+                        Curso em Video
+                    </h3>
+                    <p class="titulacao">
+                        Curso de JavaScript
+                    </p>
+                </div>
+                
+                <div class="curso">
+                    <p class="perido">
+                        2022 - 2023
+                    </p>
+                    <h3 class="instituicao">
+                        E E Professor Luiz Gonzaga da Costa
+                    </h3>
+                    <p class="titulacao">
+                        Ensino Médio
+                    </p>
+                </div>
+            </div>
+        </article><!---Fim article#formacao-->
+        <article id="projetos">
+            <h2><i class="fa-solid fa-trowel-bricks"></i>Projetos</h2>
+            <div id="projetos-container">
+                <div class="projeto">
+                    <img src="imagens/projeto-01-videos.jpg" alt="projeto 1" class="foto">
+                    <div class="projeto-info">
+                        <p class="periodo">
+                            2022
+                        </p>
+                        <h3 class="titulo">
+                            Projeto de Videos
+                        </h3>
+                        <p>
+                            Projeto construido para treinar a inserção de videos em nosso site.
+                        </p>
+                        <details class="descrição">
+                            <summary>Ver mais</summary>
+                            <p>
+                                Projeto construido para treinar a inserção de videos em nosso site. Utilizando HTML5 e CSS3 para estruturar e estilizar a página, garantindo uma experiência visual agradável e responsiva.
+                            </p>
+
+                        </details>
+                    </div>
+                </div><div class="projeto">
+                    <img src="imagens/projeto-02-cordel.jpg" alt="projeto 2" class="foto">
+                    <div class="projeto-info">
+                        <p class="periodo">
+                            2023
+                        </p>
+                        <h3 class="titulo">
+                            Projeto Cordel
+                        </h3>
+                        <p>
+                            Projeto construido para treinar o efeito parallax em nosso site.
+                        </p>
+                        <details class="descrição">
+                            <summary>Ver mais</summary>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio doloribus, consequatur aut officia magni officiis nobis quidem sequi, neque adipisci iste expedita perspiciatis fugiat repudiandae maiores ipsum? Sit, eveniet laboriosam?
+                            </p>
+
+                        </details>
                     </div>
                 </div>
+                <div class="projeto">
+                    <img src="imagens/projeto-03-android.jpg" alt="projeto 3" class="foto">
+                    <div class="projeto-info">
+                        <p class="periodo">
+                            2022
+                        </p>
+                        <h3 class="titulo">
+                            Projeto Android
+                        </h3>
+                        <p>
+                            Projeto construido para treinar conteudo e imagens em nosso site.
+                        </p>
+                        <details class="descrição">
+                            <summary>Ver mais</summary>
+                            <p>
+                                Projeto construido para treinar a inserção de videos em nosso site. Utilizando HTML5 e CSS3 para estruturar e estilizar a página, garantindo uma experiência visual agradável e responsiva.
+                            </p>
 
-            </section>
-        </article>
-        
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </article><!---Fim article#projetos-->
+     </section>
     </main>
-    <Footer>
 
-    </Footer>
+    <footer>
+        Portfólio <a href="" target="_blank">DEVSANTOSZ</a> - &copy; 2024
+    </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
