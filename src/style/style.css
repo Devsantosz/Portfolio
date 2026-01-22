@@ -43,8 +43,44 @@ body.escuro{
   --texto-inverso: #ffffff;
   --destaque: #950DDE;
   --destaque-inverso: #5D008E;
-  --fundo-card: rgba(102, 101, 101, 0.067);
+  --fundo-card: rgb(34, 34, 34);
 }
+body.escuro::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    linear-gradient(45deg, var(--destaque), transparent) 15% -10% / 2px 80px no-repeat,
+    linear-gradient(45deg, var(--destaque), transparent) 35% -30% / 2px 100px no-repeat,
+    linear-gradient(45deg, var(--destaque), transparent) 55% -50% / 2px 90px no-repeat,
+    linear-gradient(45deg, var(--destaque), transparent) 75% -20% / 2px 110px no-repeat,
+    linear-gradient(45deg, var(--destaque), transparent) 95% -40% / 2px 95px no-repeat;
+  animation: estrelas 7s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes estrelas {
+  from {
+    background-position:
+      15% -10%,
+      35% -30%,
+      55% -50%,
+      75% -20%,
+      95% -40%;
+  }
+  to {
+    background-position:
+      -10% 110%,
+      10% 130%,
+      30% 150%,
+      50% 120%,
+      70% 140%;
+  }
+}
+
+
 
 header{
   background-color: var(--destaque);
@@ -55,7 +91,7 @@ header{
   align-content: center;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 999;
 }
 
 nav#menu ul{
@@ -91,6 +127,7 @@ section#ficha{
   border-radius: 8px;
   border: 1px solid var(--texto);
   grid-column: 2;
+  z-index: 2;
 }
 
 section#ficha img.foto{
@@ -135,7 +172,7 @@ div#social{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.6em;
+  font-size: 1.8em;
   gap: 1em;
   
 }
@@ -151,7 +188,7 @@ div#social a:hover{
 
 section#detalhes{
   grid-column: 2;
-
+  z-index: 2;
 }
 
 article{
@@ -160,6 +197,8 @@ article{
   margin-bottom: 20px;
   border-radius: 8px;
   border: 1px solid var(--texto);
+
+  
 }
 
 article h2{
@@ -175,7 +214,7 @@ article h2{
 }
 
 .video-container iframe{
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -222,19 +261,20 @@ article h2{
   display: flex;
   flex-direction: column-reverse;
   gap: 20px;
+  
 }
 
 #formacao-container .curso{
   background-color: var(--fundo-principal);
   border-radius: 8px;
-  border-left: 5px solid var(--destaque-inverso);
+  border-left: 5px solid var(--destaque);
   padding-left: 15px;
   transition: border-left-width 0.5s, border-color 0.5s;
 }
 
 #formacao-container .curso:hover{
   border-left-width: 15px;
-  border-color: var(--destaque);
+  border-color: var(--destaque-inverso);
   cursor: pointer;
 }
 
@@ -245,7 +285,7 @@ article h2{
 }
 
 #formacao-container .instituicao{
-  color: var(--destaque-inverso);
+  color: var(--destaque);
   font-size: 1.1em;
 }
 
@@ -262,17 +302,21 @@ article h2{
   background-color: var(--fundo-principal);
   border-radius: 8px;
   padding: 10px;
-  border-left: 5px solid;
+  border-left: 5px solid var(--destaque);
   transition: border-left-width 0.5s, border-color 0.5s;
 }
 
-#projetos-container .projeto:hover{
- border-color: var(--destaque);
+#projetos .titulo{
+  color: var(--destaque);
+}
+
+#projetos .projeto:hover{
+ border-color: var(--destaque-inverso);
  border-left-width: 15px;
   cursor: pointer;
 }
 
-#projetos-container .foto{
+#projetos .foto{
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
@@ -284,7 +328,9 @@ footer{
   background-color: var(--destaque);
   color: var(--texto-inverso);
   text-align: center;
-  padding: 15px;
+  padding: 12px;
+  position: relative;
+  z-index: 999;
 }
 
 footer a{
