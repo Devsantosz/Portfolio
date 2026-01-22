@@ -23,7 +23,7 @@
   --fundo-card: #e2e2e2;
   --text-hover: #eeff00fa;
 }
-#ae00ff
+
 html, body {
   width: 100%;
   height: 100%;
@@ -197,8 +197,6 @@ article{
   margin-bottom: 20px;
   border-radius: 8px;
   border: 1px solid var(--texto);
-
-  
 }
 
 article h2{
@@ -255,6 +253,7 @@ article h2{
   height: 100%;
   background-color: var(--destaque-inverso);
   border-radius: 4px;
+  transition: width 1s ease;
 }
 
 #formacao-container{
