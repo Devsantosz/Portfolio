@@ -18,8 +18,8 @@
   --fundo-principal: #f5f5ff;
   --texto: #070707;
   --texto-inverso: #ffffff;
-  --destaque: #430361;
-  --destaque-inverso: #430361;
+  --destaque: #430663;
+  --destaque-inverso: #950DDE;
   --fundo-card: #e2e2e2;
   --text-hover: #eeff00fa;
 }
@@ -41,8 +41,8 @@ body.escuro{
   --fundo-principal:#222222;
   --texto: #e0e0e0;
   --texto-inverso: #ffffff;
-  --destaque: #A615EA;
-  --destaque-inverso: #622d7a;
+  --destaque: #950DDE;
+  --destaque-inverso: #5D008E;
   --fundo-card: rgba(102, 101, 101, 0.067);
 }
 
@@ -89,7 +89,7 @@ section#ficha{
   background-color: var(--fundo-card);
   padding: 20px;
   border-radius: 8px;
-
+  border: 1px solid var(--texto);
   grid-column: 2;
 }
 
@@ -119,13 +119,25 @@ section#ficha p{
   text-indent: 10px;
 }
 
+section#music{
+  width: 100%;
+  height: fit-content;
+  margin: 10px;
+}
+
+#music iframe{
+  width: 100%;
+  height: calc(220px - 66px);
+  margin: 10px 0;
+}
+
 div#social{
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.6em;
   gap: 1em;
-  margin-top: 15px;
+  
 }
 
 div#social a{
@@ -147,6 +159,7 @@ article{
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
+  border: 1px solid var(--texto);
 }
 
 article h2{
@@ -286,11 +299,12 @@ footer a:hover{
 
 @media screen and (min-width: 768px){
   main{
-    grid-template-columns: auto 300px 1fr auto;
+    grid-template-columns: auto 320px 1fr auto;
   }
 
   section#ficha{
     grid-column: 2 / 3;
+    
     height: fit-content;
     position: sticky;
     top: 60px;
