@@ -52,11 +52,11 @@ body.escuro::after {
   pointer-events: none;
   z-index: 0;
   background:
-    linear-gradient(45deg, var(--destaque), transparent) 15% -10% / 2px 80px no-repeat,
-    linear-gradient(45deg, var(--destaque), transparent) 35% -30% / 2px 100px no-repeat,
-    linear-gradient(45deg, var(--destaque), transparent) 55% -50% / 2px 90px no-repeat,
-    linear-gradient(45deg, var(--destaque), transparent) 75% -20% / 2px 110px no-repeat,
-    linear-gradient(45deg, var(--destaque), transparent) 95% -40% / 2px 95px no-repeat;
+    linear-gradient(45deg, white, transparent) 15% -10% / 2px 80px no-repeat,
+    linear-gradient(45deg, white, transparent) 35% -30% / 2px 100px no-repeat,
+    linear-gradient(45deg, white, transparent) 55% -50% / 2px 90px no-repeat,
+    linear-gradient(45deg, white, transparent) 75% -20% / 2px 110px no-repeat,
+    linear-gradient(45deg, white, transparent) 95% -40% / 2px 95px no-repeat;
   animation: estrelas 7s linear infinite;
   opacity: 0.6;
 }
