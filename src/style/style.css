@@ -204,14 +204,43 @@ section#welcome{
   font-size: 2.8em;
   margin: 10px;
   border-bottom: 2px solid var(--destaque-inverso);
+  text-shadow: 1px 1px 1px rgb(233, 233, 233);
+}
+
+#welcome h2 span{
+  color: var(--destaque);
+  text-shadow: 1px 1px 5px var(--destaque);
 }
 
 #welcome p{
+  text-shadow: 1px 1px 5px rgb(233, 233, 233);
   letter-spacing: 5px;
   text-align: center;
   font-size: 1.4em;
   margin: 10px;
 }
+
+.slide-in{
+  opacity: 0;
+  transform: translateX(-80px); /* começa fora da tela à esquerda */
+  animation: slideIn 1s ease forwards;
+}
+
+.slide-in:nth-child(1){
+  animation-delay: 0.3s;
+}
+
+.slide-in:nth-child(2){
+  animation-delay: 0.8s;
+}
+
+@keyframes slideIn{
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 section#ficha{
   background-color: var(--fundo-card);
