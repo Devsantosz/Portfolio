@@ -185,6 +185,34 @@ main{
   margin-top: 20px;
 }
 
+section#welcome{
+  width: 100%;
+  height: calc(100vh - 60px);
+  grid-column: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;     
+}
+
+#welcome h2{
+  line-height: 1.2em;
+  
+  letter-spacing: 5px;
+  text-align: center;
+  font-size: 2.8em;
+  margin: 10px;
+  border-bottom: 2px solid var(--destaque-inverso);
+}
+
+#welcome p{
+  letter-spacing: 5px;
+  text-align: center;
+  font-size: 1.4em;
+  margin: 10px;
+}
+
 section#ficha{
   background-color: var(--fundo-card);
   padding: 20px;
@@ -409,6 +437,10 @@ footer a:hover{
 @media screen and (min-width: 768px){
   main{
     grid-template-columns: auto 320px 1fr auto;
+  }
+
+  section#welcome{
+    grid-column: 1 / 5;
   }
 
   section#ficha{
