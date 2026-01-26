@@ -529,6 +529,32 @@ footer a:hover{
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
+.msg-sucesso,
+.msg-erro {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.msg-sucesso {
+  background: #d4edda;
+  color: #155724;
+}
+
+.msg-erro {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
 @media screen and (min-width: 768px){
   main{
     grid-template-columns: auto 320px 1fr auto;

@@ -38,3 +38,46 @@ navLinks.forEach(link => {
     }
   });
 });
+
+const form = document.getElementById("form-contato");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const button = form.querySelector("button");
+  button.textContent = "Enviando...";
+  button.disabled = true;
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch("/api/enviar", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.ok) {
+      mostrarMensagem("✅ Email enviado com sucesso!", "sucesso");
+      form.reset();
+    } else {
+      mostrarMensagem("❌ Erro ao enviar. Tente novamente.", "erro");
+    }
+  } catch (error) {
+    mostrarMensagem("❌ Erro de conexão.", "erro");
+  }
+
+  button.textContent = "Enviar mensagem";
+  button.disabled = false;
+});
+
+function mostrarMensagem(texto, tipo) {
+  let msg = document.createElement("div");
+  msg.className = `msg-${tipo}`;
+  msg.textContent = texto;
+
+  form.appendChild(msg);
+
+  setTimeout(() => {
+    msg.remove();
+  }, 4000);
+}
