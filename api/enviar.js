@@ -1,30 +1,27 @@
 import nodemailer from "nodemailer";
 
+export const config = {
+  api: {
+    bodyParser: true,
+  },
+};
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).send("Método não permitido");
+    return res.status(405).json({ message: "Método não permitido" });
   }
 
-  const buffers = [];
-  for await (const chunk of req) {
-    buffers.push(chunk);
-  }
-  const data = Buffer.concat(buffers).toString();
-  const params = new URLSearchParams(data);
-
-  const nome = params.get("nome");
-  const email = params.get("email");
-  const mensagem = params.get("mensagem");
-
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
+  const { nome, email, mensagem } = req.body;
 
   try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
@@ -38,9 +35,9 @@ ${mensagem}
       `,
     });
 
-    return res.status(200).send("Email enviado com sucesso!");
+    return res.status(200).json({ message: "Email enviado com sucesso!" });
   } catch (error) {
-    console.error(error);
-    return res.status(500).send("Erro ao enviar email");
+    console.error("ERRO REAL:", error);
+    return res.status(500).json({ message: "Erro ao enviar email" });
   }
 }
