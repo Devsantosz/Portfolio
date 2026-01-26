@@ -19,7 +19,7 @@
   --texto: #070707;
   --texto-inverso: #ffffff;
   --destaque: #5a189a;
-  --destaque-inverso: #782ec2;
+  --destaque-inverso: #6c24b4;
   --fundo-card: #e2e2e2;
   --text-hover: #ff9900fa;
 }
@@ -437,7 +437,7 @@ article h2{
   cursor: pointer;
 }
 
-#projetos .foto{
+#projetos a .foto{
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
@@ -498,9 +498,9 @@ footer a:hover{
     justify-content: space-between;
   }
 
-  #projetos-container .foto{
+  #projetos-container a .foto{
     aspect-ratio: 1 / 1;
-    max-width: 20%;
+    max-width: 100%;
     max-height: 200px;
   }
   
