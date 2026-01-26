@@ -5,7 +5,16 @@ export default async function handler(req, res) {
     return res.status(405).send("Método não permitido");
   }
 
-  const { nome, email, mensagem } = req.body;
+  const buffers = [];
+  for await (const chunk of req) {
+    buffers.push(chunk);
+  }
+  const data = Buffer.concat(buffers).toString();
+  const params = new URLSearchParams(data);
+
+  const nome = params.get("nome");
+  const email = params.get("email");
+  const mensagem = params.get("mensagem");
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -31,6 +40,7 @@ ${mensagem}
 
     return res.status(200).send("Email enviado com sucesso!");
   } catch (error) {
+    console.error(error);
     return res.status(500).send("Erro ao enviar email");
   }
 }
