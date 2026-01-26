@@ -48,12 +48,19 @@ form.addEventListener("submit", async (e) => {
   button.textContent = "Enviando...";
   button.disabled = true;
 
-  const formData = new FormData(form);
+  const data = {
+    nome: form.querySelector('[name="nome"]').value,
+    email: form.querySelector('[name="email"]').value,
+    mensagem: form.querySelector('[name="mensagem"]').value,
+  };
 
   try {
     const response = await fetch("/api/enviar", {
       method: "POST",
-      body: formData,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
     });
 
     if (response.ok) {
@@ -69,6 +76,7 @@ form.addEventListener("submit", async (e) => {
   button.textContent = "Enviar mensagem";
   button.disabled = false;
 });
+
 
 function mostrarMensagem(texto, tipo) {
   let msg = document.createElement("div");
