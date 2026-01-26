@@ -248,6 +248,7 @@ section#ficha{
   border: 1px solid var(--texto);
   grid-column: 2;
   z-index: 2;
+  margin-bottom: 20px;
 }
 
 section#ficha img.foto{
