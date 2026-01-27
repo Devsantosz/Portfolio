@@ -245,7 +245,7 @@ section#ficha{
   background-color: var(--fundo-card);
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid var(--texto);
+  box-shadow: 0px 0px 8px var(--destaque-inverso);
   grid-column: 2;
   z-index: 2;
   margin-bottom: 20px;
@@ -263,6 +263,13 @@ section#ficha img.foto{
   display: block;
   margin: auto;
   margin-bottom: 15px;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+
+section#ficha img.foto:hover{
+  transform: scale(1.05);
 }
 
 section#ficha h1{
@@ -315,11 +322,11 @@ section#detalhes{
 }
 
 article{
+  box-shadow: 0px 0px 8px var(--destaque-inverso);
   background-color: var(--fundo-card);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
-  border: 1px solid var(--texto);
 }
 
 article h2{
@@ -455,8 +462,8 @@ footer{
   color: var(--texto-inverso);
   text-align: center;
   padding: 12px;
-  position: relative;
   z-index: 999;
+  position: relative;
 }
 
 footer a{
@@ -562,7 +569,7 @@ footer a:hover{
 
 @media screen and (min-width: 768px){
   main{
-    grid-template-columns: auto 320px 1fr auto;
+    grid-template-columns: auto 300px 1fr auto;
   }
 
   section#welcome{
@@ -596,8 +603,7 @@ footer a:hover{
 
   #projetos-container a .foto{
     aspect-ratio: 1 / 1;
-    max-width: 200px;
-    max-height: 100%;
+    width: 200px;
   }
 
    .form-contato {

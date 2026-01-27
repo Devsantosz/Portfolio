@@ -89,3 +89,20 @@ function mostrarMensagem(texto, tipo) {
     msg.remove();
   }, 4000);
 }
+
+
+const foto = document.getElementById('fotoPerfil');
+
+const fotos = [
+  'src/image/minidev.png',
+  'src/image/perfil.jpeg'
+];
+
+let atual = 0;
+
+foto.addEventListener('click', () => {
+  atual = (atual + 1) % fotos.length;
+  foto.src = fotos[atual];
+});
+
+
