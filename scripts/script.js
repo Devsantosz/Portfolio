@@ -1,11 +1,11 @@
 const botao = document.getElementById('botao-tema');
 const body = document.body;
 
-// Persistência do tema
+/* Persistência do tema */
 const temasalvo = localStorage.getItem('tema');
 temaEscuro(temasalvo === 'escuro');
 
-// Função para alternar entre tema claro e escuro
+/* Função para alternar entre tema claro e escuro 8*/
 function temaEscuro(tipo) {
   if (tipo == true) {
     body.classList.add('escuro');
@@ -22,7 +22,7 @@ botao.addEventListener('click', () => {
   localStorage.setItem('tema', isescuro ? 'escuro' : 'claro');
 });
 
-// Scroll suave para links de navegação
+/* Scroll suave para links de navegação */
 const navLinks = document.querySelectorAll('#menu ul a.link');
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
@@ -39,6 +39,7 @@ navLinks.forEach(link => {
   });
 });
 
+/* Formulario*/
 const form = document.getElementById("form-contato");
 
 form.addEventListener("submit", async (e) => {
@@ -90,7 +91,7 @@ function mostrarMensagem(texto, tipo) {
   }, 4000);
 }
 
-
+/* Alterar foto de perfil*/
 const foto = document.getElementById('fotoPerfil');
 
 const fotos = [
