@@ -11,7 +11,7 @@ Projeto desenvolvido para apresentar meus projetos e habilidades como desenvolve
 Aplicar conceitos de estrutura semântica, responsividade e organização de código.
 
 ## 📸 Preview
-![preview](src/image/port.png)
+![preview](src/image/portfolio.jpg)
 
 ## 🔗 Deploy
 https://devsantosz.github.io/Portfolio/
