@@ -302,7 +302,7 @@ div#social{
   justify-content: center;
   align-items: center;
   font-size: 1.8em;
-  gap: 1em;
+  gap: 0.8em;
   
 }
 
@@ -435,11 +435,23 @@ article h2{
   transition: border-left-width 0.5s, border-color 0.5s;
 }
 
-#projetos .titulo{
+.titulo-s{
+  font-size: 1.1rem;
+  color: var(--destaque);
+  padding: 5px 0px;
+}
+
+.ling{
+  list-style: inside;
+  text-decoration: none;
+}
+
+.titulo{
   color: var(--destaque);
 }
 
-#projetos p{
+.projeto p{
+  text-align: justify;
   text-indent: 10px;
 }
 
