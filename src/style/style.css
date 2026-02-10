@@ -353,7 +353,7 @@ article h2{
 #skill-container{
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 10px;
 }
 
 #skill-container .info{
@@ -367,24 +367,17 @@ article h2{
   color: var(--texto);
 }
 
-#skill-container .porcent{
+
+#skill-container .barra p{
   font-weight: bold;
   color: var(--destaque);
+  text-indent: 5px;
+  
+  font-size: 1rem;
+  line-height: 18px;
+  text-align: justify;
 }
 
-#skill-container .barra{
-  width: 100%;
-  height: 8px;
-  background-color: var(--fundo-principal);
-  border-radius: 4px;
-}
-
-#skill-container .progresso{
-  height: 100%;
-  background-color: var(--destaque);
-  border-radius: 4px;
-  transition: width 1s ease;
-}
 
 #formacao-container{
   display: flex;
