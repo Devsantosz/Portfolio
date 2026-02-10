@@ -353,8 +353,9 @@ article h2{
 #skill-container{
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 18px;
 }
+
 
 #skill-container .info{
   display: flex;
@@ -367,23 +368,22 @@ article h2{
   color: var(--texto);
 }
 
-
 #skill-container .barra p{
-  font-weight: bold;
+  font-weight: 600;
   color: var(--destaque);
-  text-indent: 5px;
-  
   font-size: 1rem;
-  line-height: 18px;
+  line-height: 1.1;
   text-align: justify;
+  text-indent: 5px;
+  margin-top: 3px;
 }
+
 
 
 #formacao-container{
   display: flex;
   flex-direction: column-reverse;
   gap: 20px;
-  
 }
 
 #formacao-container .curso{
