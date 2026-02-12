@@ -498,12 +498,39 @@ article h2{
   cursor: pointer;
 }
 
-#projetos a .foto{
+#projetos .foto{
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
   overflow: hidden;
   border-radius: 8px;
+  
+}
+
+.projeto-info{
+  display: flex;
+  flex-direction: column;
+}
+
+
+button{
+  align-self: center; /* centraliza só o botão */
+  margin: 15px 0;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: var(--destaque);
+  color: var(--texto-inverso);
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 footer{
@@ -651,7 +678,7 @@ footer a:hover{
     justify-content: space-between;
   }
 
-  #projetos-container a .foto{
+  #projetos-container  .foto{
     aspect-ratio: 1 / 1;
     width: 200px;
   }

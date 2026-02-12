@@ -107,3 +107,19 @@ foto.addEventListener('click', () => {
 });
 
 
+/* Projetos */
+const img = document.getElementById('System');
+
+const imagens = [
+  'src/image/tela-login.png',
+  'src/image/estoque.png'
+];
+
+img.addEventListener('click', () => {
+  img.src = 'src/image/estoque.png';
+});
+
+img.addEventListener('click', () => {
+  atual = (atual + 1) % imagens.length;
+  img.src = imagens[atual];
+});
