@@ -248,51 +248,47 @@ section#ficha{
   grid-column: 2;
   z-index: 2;
   margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  justify-content: center;  
+  gap: 10px;  
 }
 
 section#ficha img.foto{
-  background-position: top center;
-  width: 200px;
+ 
+  height: 200px;
+  max-height: 250px;
   aspect-ratio: 1/1;
   object-fit: cover;
-  overflow: hidden;
-  border-radius: 20%;
-  border: 5px solid var(--fundo-card);
-  outline: 5px solid var(--destaque);
-  display: block;
-  margin: auto;
-  margin-bottom: 15px;
+  border-radius: 5%;
+  outline: 1px solid var(--destaque);
+  flex: auto;
   cursor: pointer;
   transition: transform .2s ease;
 }
-
 
 section#ficha img.foto:hover{
   transform: scale(1.05);
 }
 
+
 section#ficha h1{
- color: var(--destaque);
-  margin: 15px 0;
-  font-size: 1.5em;
-  text-align: center;
+  color: var(--destaque);
+  font-size: 1.8em;
+  
   text-shadow: 2px 2px 5px rgba(236, 236, 236, 0.034);
 }
 
 section#ficha p{
+  max-width: 500px;
   text-align: justify;
   text-indent: 10px;
+  line-height: 1.5;
 }
-
-section#music{
-  width: 100%;
-  height: fit-content;
-  margin: 10px;
-}
-
 
 div#social{
-  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -451,18 +447,21 @@ article h2{
 }
 
 #projetos-container{
+  grid-column: 2 / 3;
   display: flex;
   flex-direction: column-reverse;
-  gap: 20px;
+  gap: 10px;
 }
 
 #projetos-container .projeto{
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;      
+  justify-content: center; 
+  gap: 10px;
+  padding: 10px;
   background-color: var(--fundo-principal);
   border-radius: 8px;
-  padding: 10px;
   border-left: 5px solid var(--destaque);
   border: 1px solid var(--texto);
   transition: border-left-width 0.6s, border-color 0.6s;
@@ -651,9 +650,8 @@ footer a:hover{
 
   section#ficha{
     grid-column: 2 / 3;
-    
-    height: fit-content;
     position: sticky;
+    height: fit-content;
     top: 60px;
   }
 
@@ -672,18 +670,74 @@ footer a:hover{
     grid-column: 1 / 3;
   }
 
+  #projetos{
+    height: 90vh;
+
+  }
+
+  #projetos-container{
+    display: flex;
+    flex-direction: row-reverse;        
+    flex-wrap: nowrap;          
+
+    width: 68vw;                
+    max-height: 85vh;
+
+    overflow-x: auto;           
+    overflow-y: hidden;
+
+    cursor: grab;
+    user-select: none; 
+
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    
+  }
+
+  #projetos-container::-webkit-scrollbar{
+    height: 8px; 
+
+  }
+
+  #projetos-container::-webkit-scrollbar-track{
+    background: transparent;
+  }
+
+  #projetos-container::-webkit-scrollbar-thumb{
+    background: var(--destaque);
+    border-radius: 6px; 
+  }
+
+  #projetos-container::-webkit-scrollbar-thumb:hover{
+    background: var(--destaque-inverso);
+  }
+
+  #projetos-container.dragging{
+    cursor: grabbing; 
+  }
+  
   #projetos-container .projeto-info{
-    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
   }
 
   #projetos-container .projeto{
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex: 0 0 100%;             /* ✅ 1 card por vez dentro dos 68vw */
+    width: 100%;
+    height: 80vh;
+
+    scroll-snap-align: start;
+    
   }
 
   #projetos-container  .foto{
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.377);
     aspect-ratio: 1 / 1;
-    width: 200px;
+    width: 100%;
   }
 
    .form-contato {
