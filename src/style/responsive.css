@@ -29,10 +29,6 @@
     min-width: 0;
   }
 
-  #skill-container{
-    grid-template-columns: repeat(4, 1fr);
-  }
-
   #skill-container .item span{
     
     text-align: center;
