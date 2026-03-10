@@ -15,13 +15,12 @@
 }
 
 :root{
-  --fundo-principal: #f5f5ff;
-  --texto: #070707;
-  --texto-inverso: #ffffff;
-  --destaque: #5a189a;
-  --destaque-inverso: #6c24b4;
-  --fundo-card: #e2e2e2;
-  --text-hover: #ff9900fa;
+  --fundo-principal:#000000;
+  --fundo-card:rgb(34, 34, 34);
+  --texto: #ffffff;
+  --color1: #5a189a;
+  --color2: #6c24b4;
+  --text-hover: #E0D700;
 }
 
 
@@ -34,119 +33,14 @@ body{
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
-  transition: background-color 0.5s, color 0.5s;
 }
 
-body.escuro{
-  --fundo-principal:#222222;
-  --texto: #e0e0e0;
-  --texto-inverso: #ffffff;
-  --fundo-card: rgb(34, 34, 34);
-}
-
-
-body.escuro::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  rotate: 60deg;
-  background:
-    linear-gradient(45deg, white, transparent) 10% -20% / 2px 90px no-repeat,
-    linear-gradient(45deg, white, transparent) 30% -40% / 2px 110px no-repeat,
-    linear-gradient(45deg, white, transparent) 50% -30% / 2px 100px no-repeat,
-    linear-gradient(45deg, white, transparent) 70% -50% / 2px 120px no-repeat,
-    linear-gradient(45deg, white, transparent) 90% -20% / 2px 95px no-repeat;
-
-  animation: estrelas-rapidas 5s linear infinite;
-  opacity: 0.7;
-}
-
-body.escuro::before {
-  rotate: 60deg;
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-
-  background:
-    linear-gradient(45deg, rgba(255,255,255,.8), transparent) 15% -10% / 2px 70px no-repeat,
-    linear-gradient(45deg, rgba(255,255,255,.8), transparent) 35% -30% / 2px 90px no-repeat,
-    linear-gradient(45deg, rgba(255,255,255,.8), transparent) 55% -20% / 2px 85px no-repeat,
-    linear-gradient(45deg, rgba(255,255,255,.8), transparent) 75% -40% / 2px 100px no-repeat;
-
-  animation: estrelas-medias 8s linear infinite;
-  opacity: 0.5;
-}
-
-body.escuro .estrelas-lentas {
-  rotate: 60deg;
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-
-  background:
-    linear-gradient(45deg, rgba(255,255,255,.5), transparent) 20% -20% / 2px 60px no-repeat,
-    linear-gradient(45deg, rgba(255,255,255,.5), transparent) 60% -30% / 2px 80px no-repeat;
-
-  animation: estrelas-lentas 12s linear infinite;
-}
-
-@keyframes estrelas-rapidas {
-  from {
-    background-position:
-      10% -30%,
-      30% -50%,
-      50% -40%,
-      70% -60%,
-      90% -30%;
-  }
-  to {
-    background-position:
-      -20% 120%,
-      0% 140%,
-      20% 130%,
-      40% 160%,
-      60% 150%;
-  }
-}
-
-@keyframes estrelas-medias {
-  from {
-    background-position:
-      15% -20%,
-      35% -40%,
-      55% -30%,
-      75% -50%;
-  }
-  to {
-    background-position:
-      10% 120%,
-      30% 140%,
-      50% 130%,
-      70% 150%;
-  }
-}
-
-@keyframes estrelas-lentas {
-  from {
-    background-position:
-      20% -20%,
-      60% -30%;
-  }
-  to {
-    background-position:
-      30% 120%,
-      70% 140%;
-  }
-}
 
 
 header{
-  background-color: var(--destaque);
+ background-color: var(--fundo-principal);
+  
+  border-bottom: 4px solid var(--color01);
   color: var(--texto);
   padding: 10px;
   display: flex;
@@ -157,57 +51,121 @@ header{
   z-index: 999;
 }
 
+header p{
+  flex: auto;
+  justify-content: flex-start;
+
+  color: var(--color2);
+
+  font-family: Arial, Helvetica, sans-serif, Helvetica, sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
 nav#menu ul{
   list-style: none;
   display: flex;
   gap: 10px;
+
+  position: relative;
 }
 
+nav#menu ul::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 2px;
+  background: var(--color2);
+  transition: 0.4s;
+}
+
+nav#menu ul:hover::after{
+  width: 100%;
+}
+
+
 nav#menu a{
+  font-size: 1.2em;
   text-decoration: none;
-  color: var(--texto-inverso);
+  color: var(--texto);
   font-weight: 600;
-  padding: 12px 10px;
+  padding: 5px;
   border-radius: 5px;
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.3s;
 }
 
 nav#menu a:hover{
-  background-color: var(--texto-inverso);
-  color: var(--destaque);
+  background-color: var(--color1);
+  color: var(--fundo-card);
 }
 
 main{
   display: grid;
-   grid-template-columns: 1fr min(90vw, 1100px) 1fr;
-  margin-top: 20px;
+  grid-template-columns: 1fr min(90vw, 1100px) 1fr;
 }
 
 section#welcome{
+ 
   width: 100%;
-  min-height: calc(100dvh - 60px);
-  grid-column: 2;
+  min-height: calc(100dvh - 65px);
+  grid-column: 1/ 4;
 
   display: flex;
   flex-direction: column;
   justify-content: center;  
   align-items: center;    
   z-index: 2;
+  background: radial-gradient(circle, var(--color1) 10%, #000000 50%);
+  background-size: 100% 110%;
+  background-repeat: no-repeat;
+
+  animation: bolaDescendo 5s ease forwards;
+}
+
+@keyframes bolaDescendo{
+
+  0%{
+    background-position: top -10px;
+    top: -10px;
+  }
+
+  100%{
+    background-position: center;
+  }
+
 }
 
 #welcome h2{
   line-height: 1.2em;
-  
+  color: var(--texto);
   letter-spacing: 5px;
   text-align: center;
   font-size: 2.8em;
-  border-bottom: 2px solid var(--destaque);
+ 
+  border-bottom-width: 2px;
   text-shadow: 1px 1px 5px rgba(233, 233, 233, 0.199);
 }
 
 #welcome h2 span{
-  color: var(--destaque);
+  color: var(--color2);
   text-shadow: 2px 2px 5px rgba(236, 236, 236, 0.034);
+  animation: color infinite 10s;
+}
+
+@keyframes color{
+  0%{
+    color: var(--color2)
+  }
+  50%{
+    color: var(--text-hover);
+  }
+  100%{
+    color: var(--color2)
+  }
 }
 
 #welcome p{
@@ -288,24 +246,7 @@ section#ficha p{
   line-height: 1.5;
 }
 
-div#social{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.8em;
-  gap: 0.8em;
-  
-}
 
-div#social a{
-  color: var(--destaque);
-  transition: color 0.5s;
-}
-
-div#social a:hover{
-  color: var(--destaque-inverso);
-  text-shadow: 0px 0px 5px var(--fundo-principal);
-}
 
 section#detalhes{
   grid-column: 2;
@@ -536,7 +477,7 @@ footer a:hover{
 
 .form-contato {
   max-width: 500px;
-  margin: 40px auto;
+  margin: 20px auto;
   padding: 30px;
   background: var(--fundo-card);
   border-radius: 12px;
@@ -622,6 +563,26 @@ footer a:hover{
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+div#social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  gap: 1em;
+  padding: 10px;
+  
+}
+
+div#social a{
+  color: var(--fundo-principal);
+  transition: color 0.5s;
+}
+
+div#social a:hover{
+  color: var(--destaque);
+  text-shadow: 0px 0px 5px var(--fundo-principal);
 }
 
 
