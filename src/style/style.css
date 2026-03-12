@@ -51,56 +51,40 @@ header{
   z-index: 999;
 }
 
-header p{
+header h3{
   flex: auto;
   justify-content: flex-start;
+  align-content: center;
 
   color: var(--color2);
 
   font-family: Arial, Helvetica, sans-serif, Helvetica, sans-serif;
   font-weight: bolder;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 nav#menu ul{
   list-style: none;
   display: flex;
   gap: 10px;
-
-  position: relative;
 }
-
-nav#menu ul::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-
-  width: 0;
-  height: 2px;
-  background: var(--color2);
-  transition: 0.4s;
-}
-
-nav#menu ul:hover::after{
-  width: 100%;
-}
-
 
 nav#menu a{
-  font-size: 1.2em;
+  font-size: 1.5em;
   text-decoration: none;
-  color: var(--texto);
+  color: var(--color2);
   font-weight: 600;
-  padding: 5px;
+  padding: 1px;
   border-radius: 5px;
+  border: 2px solid var(--color2);
   transition: background-color 0.5s, color 0.3s;
+  
 }
 
 nav#menu a:hover{
-  background-color: var(--color1);
-  color: var(--fundo-card);
+  border: 1px solid var(--texto);
+  color: var(--texto);
 }
 
 main{
@@ -109,9 +93,8 @@ main{
 }
 
 section#welcome{
- 
   width: 100%;
-  min-height: calc(100dvh - 65px);
+  min-height: calc(100dvh - 67px);
   grid-column: 1/ 4;
 
   display: flex;
@@ -119,18 +102,19 @@ section#welcome{
   justify-content: center;  
   align-items: center;    
   z-index: 2;
-  background: radial-gradient(circle, var(--color1) 10%, #000000 50%);
-  background-size: 100% 110%;
+
+  background: radial-gradient(circle at center, var(--color1) 10%, #000000 40%);
+  background-size: 100% 200%;
   background-repeat: no-repeat;
 
-  animation: bolaDescendo 5s ease forwards;
+  animation: bolaDescendo 2.6s ease forwards;
 }
+
 
 @keyframes bolaDescendo{
 
   0%{
-    background-position: top -10px;
-    top: -10px;
+    background-position: center 120%;
   }
 
   100%{
@@ -151,22 +135,11 @@ section#welcome{
 }
 
 #welcome h2 span{
-  color: var(--color2);
+  color: var(--text-hover);
   text-shadow: 2px 2px 5px rgba(236, 236, 236, 0.034);
   animation: color infinite 10s;
 }
 
-@keyframes color{
-  0%{
-    color: var(--color2)
-  }
-  50%{
-    color: var(--text-hover);
-  }
-  100%{
-    color: var(--color2)
-  }
-}
 
 #welcome p{
   text-shadow: 1px 1px 5px rgba(233, 233, 233, 0.384);
@@ -178,16 +151,16 @@ section#welcome{
 
 .slide-in{
   opacity: 0;
-  transform: translateX(-80px);
+  transform: translatey(-80px);
   animation: slideIn 1s ease forwards;
 }
 
 .slide-in:nth-child(1){
-  animation-delay: 0.5s;
+  animation-delay: 0.7s;
 }
 
 .slide-in:nth-child(2){
-  animation-delay: 1s;
+  animation-delay: 1.4s;
 }
 
 @keyframes slideIn{
@@ -199,30 +172,36 @@ section#welcome{
 
 
 section#ficha{
-  background-color: var(--fundo-card);
+ background: radial-gradient(circle at right, var(--color1) 20%, #000000 70%);
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0px 0px 8px var(--destaque-inverso);
+  box-shadow: 0px 0px 10px var(--color1);
   grid-column: 2;
   z-index: 2;
   margin-bottom: 20px;
 
   display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.perfil{
+  display: flex;
   flex-direction: column;
-  align-items: center;      
-  justify-content: center;  
-  gap: 10px;  
+  align-items: center;
+  gap: 10px;
 }
 
 section#ficha img.foto{
- 
   height: 200px;
-  max-height: 250px;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 5%;
   outline: 1px solid var(--destaque);
-  flex: auto;
   cursor: pointer;
   transition: transform .2s ease;
 }
@@ -231,12 +210,11 @@ section#ficha img.foto:hover{
   transform: scale(1.05);
 }
 
-
 section#ficha h1{
-  color: var(--destaque);
-  font-size: 1.8em;
+  color: var(--color2);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0);
+  font-size: 1.6em;
   
-  text-shadow: 2px 2px 5px rgba(236, 236, 236, 0.034);
 }
 
 section#ficha p{
@@ -244,6 +222,7 @@ section#ficha p{
   text-align: justify;
   text-indent: 10px;
   line-height: 1.5;
+  font-size: 1.1em;
 }
 
 
@@ -251,19 +230,26 @@ section#ficha p{
 section#detalhes{
   grid-column: 2;
   z-index: 2;
+ 
+  
 }
 
 article{
-  box-shadow: 0px 0px 8px var(--destaque-inverso);
-  background-color: var(--fundo-card);
+  background-color: var(--fundo-principal);
+  box-shadow: 0px 0px 10px var(--color1);
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 8px;
 }
 
 article h2{
-  color: var(--destaque-inverso);
+  color: var(--color1);
   margin-bottom: 20px;
+}
+
+#video{
+  background-color: var(--fundo-principal);
+  box-shadow: 0px 0px 10px var(--color1);
 }
 
 .video-container{
@@ -283,25 +269,25 @@ article h2{
 }
 
 #skill-container{
-   display: grid;
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  align-items: center;
  
   justify-content: center;
-  align-content: center;
+  align-content:center;
 
 }
 
 #skill-container .item{
   background-color: var(--fundo-principal);
-  border: 1px solid var(--fundo-principal);
+  border: 1px solid var(--color1);
+  border-radius: 8px;
   
 
   max-width: 100%;
   padding: 10px;
   cursor: pointer;
-  transition: 0.6s ease;
+  transition: 0.3s ease;
   box-sizing: border-box; 
 }
 
@@ -319,6 +305,8 @@ article h2{
   display: flex;
 }
 
+
+
 #skill-container .nome{
   font-weight: bold;
   color: var(--texto);
@@ -333,11 +321,12 @@ article h2{
   line-height: 1;
   text-align: center;
  
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 
-#skill-container .item:hover{
-  border-color: var(--destaque);
+#skill-container .item:hover {
+  border-color: var(--text-hover);
+  color: var(--text-hover);
   border-radius: 8px;
 }
 
@@ -350,27 +339,27 @@ article h2{
 #formacao-container .curso{
   background-color: var(--fundo-principal);
   border-radius: 8px;
-  border-left: 5px solid var(--destaque);
+  border-left: 1px solid var(--color2);
   padding-left: 15px;
   transition: border-left-width 0.5s, border-color 0.5s;
 
-  border: 1px solid var(--texto);
+  border: 1px solid var(--color1);
 }
 
 #formacao-container .curso:hover{
   border-left-width: 15px;
-  border-color: var(--destaque-inverso);
+  border-color: var(--text-hover);
   cursor: pointer;
 }
 
 #formacao-container .periodo{
   font-size: 0.8em;
   font-weight: bold;
-  color: var(--texto);
+  color: var(--color2);
 }
 
 #formacao-container .instituicao{
-  color: var(--destaque);
+  color: var(--color2);
   font-size: 1.1em;
 }
 
@@ -391,7 +380,7 @@ article h2{
   background-color: var(--fundo-principal);
  
   border-radius: 8px;
-  border: 1px solid var(--destaque);
+  border: 1px solid var(--color1);
 
   transition: border-bottom 0.6s, border-color 0.6s;
 }
@@ -417,7 +406,7 @@ article h2{
 }
 
 #projetos .projeto:hover{
-  border-bottom: 5px solid var(--destaque);
+  border-bottom: 5px solid var(--color2);
   cursor: pointer;
 }
 
@@ -443,8 +432,8 @@ button{
   padding: 10px;
   border: none;
   border-radius: 8px;
-  background: var(--destaque);
-  color: var(--texto-inverso);
+  background: var(--color1);
+  color: var(--texto);
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
@@ -457,7 +446,7 @@ button:hover {
 }
 
 footer{
-  background-color: var(--destaque);
+  background-color: var(--color1);
   color: var(--texto-inverso);
   text-align: center;
   padding: 12px;
@@ -465,8 +454,8 @@ footer{
   position: relative;
 }
 
-footer a{
-  color: var(--texto-inverso);
+footer p a{
+  color: var(--texto);
   text-decoration: none;
   font-weight: bold;
 }
@@ -479,7 +468,7 @@ footer a:hover{
   max-width: 500px;
   margin: 20px auto;
   padding: 30px;
-  background: var(--fundo-card);
+  background: var(--fundo-principal);
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   display: flex;
@@ -517,7 +506,7 @@ footer a:hover{
 /* Efeito ao focar */
 .form-contato input:focus,
 .form-contato textarea:focus {
-  border-color: var(--destaque);
+  border-color: var(--color1);
   box-shadow: 0 0 0 3px rgba(100, 100, 255, 0.15);
 }
 
@@ -526,8 +515,8 @@ footer a:hover{
   padding: 14px;
   border: none;
   border-radius: 8px;
-  background: var(--destaque);
-  color: var(--texto-inverso);
+  background: var(--color1);
+  color: var(--texto);
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -576,12 +565,12 @@ div#social{
 }
 
 div#social a{
-  color: var(--fundo-principal);
+  color: var(--text-hover);
   transition: color 0.5s;
 }
 
 div#social a:hover{
-  color: var(--destaque);
+  color: var(--texto);
   text-shadow: 0px 0px 5px var(--fundo-principal);
 }
 

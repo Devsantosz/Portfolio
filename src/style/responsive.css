@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 790px){
+  nav#menu ul{
+    
+    gap: 20px;
+  }
+
   main{
     grid-template-columns: auto 300px 1fr auto; 
     gap: 10px;
@@ -11,10 +16,19 @@
   }
 
   section#ficha{
+    background: radial-gradient(circle at center bottom, var(--color1) 10%, #000000 70%);
+    flex-direction: column;
     grid-column: 2;
-    position: sticky;
+    grid-row: 2 / 3;
     height: fit-content;
-    top: 60px;
+  }
+
+  section#ficha p{
+    max-width: 100%;
+    text-align: justify;
+    text-indent: 10px;
+    line-height: 1.6;
+    font-size: 1.3em;
   }
 
   section#detalhes{
