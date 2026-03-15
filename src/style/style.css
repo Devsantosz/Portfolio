@@ -38,17 +38,20 @@ body{
 
 
 header{
- background-color: var(--fundo-principal);
+  background-color: rgba(0, 0, 0, 0.678) ;
   
-  border-bottom: 4px solid var(--color01);
+  border: 1px solid var(--color1);
+  border-radius: 10px;
   color: var(--texto);
-  padding: 10px;
+  padding: 8px;
+  margin: 10px;
   display: flex;
   justify-content: flex-end;
   align-content: center;
   position: sticky;
   top: 0;
   z-index: 999;
+
 }
 
 header h3{
@@ -61,29 +64,31 @@ header h3{
   font-family: Arial, Helvetica, sans-serif, Helvetica, sans-serif;
   font-weight: bolder;
   text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 nav#menu ul{
+  justify-content: flex-end;
+  align-content: center;
   list-style: none;
   display: flex;
   gap: 10px;
 }
 
 nav#menu a{
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-decoration: none;
   color: var(--color2);
-  font-weight: 600;
+  
   padding: 1px;
   border-radius: 5px;
-  border: 2px solid var(--color2);
+  border: 1px solid var(--color2);
   transition: background-color 0.5s, color 0.3s;
   
 }
 
 nav#menu a:hover{
-  border: 1px solid var(--texto);
+  border-color: var(--texto);
   color: var(--texto);
 }
 
