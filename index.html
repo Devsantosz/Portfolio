@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Devsantosz</title>
-    <link rel="stylesheet" href="./src/style/style.css">
-    <link rel="stylesheet" href="./src/style/responsive.css">
-    <link rel="shortcut icon" href="src/image/mao.ico" type="image/ico">
+    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="src/style/responsive.css">
+    <link rel="shortcut icon" href="src/assets/icons/mao.ico" type="image/ico">
 </head>
 <body class="escuro">
     <header>
-        <h3>Devsantosz</h3>
+        <h3><span>Dev</span>santosz</h3>
         <nav id="menu">
             <ul>
                 <li><a href="#video" class="link"><i class="fa-regular fa-house"></i></a></li>
@@ -31,10 +31,10 @@
             Desenvolvendo soluções que fazem diferença.
            </p>
         </section>
-
-     <section id="ficha">
+    <div id="cursor"></div>
+    <section id="ficha">
         <div class="perfil">
-            <img src="src/image/minidev.png" alt="guilherme luz" class="foto" id="fotoPerfil">
+            <img src="src/assets/image/minidev.png" alt="guilherme luz" class="foto" id="fotoPerfil">
             <h1>
                 DEVSANTOSZ
             </h1>
@@ -45,14 +45,14 @@
         </p>
         
      </section>
-     <section id="detalhes">
-        <article id="video">
+     <article id="video">
             <h2><i class="fa-solid fa-user"></i>Sobre mim</h2>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/QulRzw6CWCA?si=-I_l5GUPjXtf9Fa2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-        </article> 
-        <!---Fim article#video-->
+    </article> 
+    <!---Fim article#video-->
+     <section id="detalhes">
         <article id="skills">
             <h2><i class="fa-solid fa-brain"></i>Skills</h2>
                 <div id="skill-container">
@@ -222,7 +222,7 @@
             <h2><i class="fa-solid fa-pen-ruler"></i>Projetos</h2>
             <div id="projetos-container">
                      <div class="projeto">
-                            <img src="src/image/connection.png" alt="projeto 1" class="foto" >
+                            <img src="src/assets/image/connection.png" alt="projeto 1" class="foto" >
                         <div class="projeto-info">
                             <p class="periodo">
                                 2026
@@ -250,7 +250,7 @@
                         </div>
                     </div>
                     <div class="projeto">
-                            <img src="src/image/tela-login.png" alt="projeto 1" class="foto" id="System">
+                            <img src="src/assets/image/estoque.png" alt="projeto 1" class="foto" id="System">
                         <div class="projeto-info">
                             <p class="periodo">
                                 2026
@@ -280,7 +280,7 @@
                         </div>
                     </div>
                     <div class="projeto">
-                            <img src="src/image/portfolio.jpg" alt="projeto 1" class="foto">
+                            <img src="src/assets/image/portfolio.jpg" alt="projeto 1" class="foto">
 
                         <div class="projeto-info">
                             <p class="periodo">
@@ -303,7 +303,7 @@
                         </div>
                     </div>
                     <div class="projeto">
-                            <img src="src/image/sistema-de-cad.jpg" alt="projeto 1" class="foto">
+                            <img src="src/assets/image/sistema-de-cad.jpg" alt="projeto 1" class="foto">
                         <div class="projeto-info">
                             <p class="periodo">
                                 2026
@@ -332,7 +332,7 @@
                         </div>
                     </div>
                     <div class="projeto">
-                            <img src="src/image/calculadora.jpg" alt="projeto 1" class="foto">
+                            <img src="src/assets/image/calculadora.jpg" alt="projeto 1" class="foto">
                         <div class="projeto-info">
                             <p class="periodo">
                                 2026
@@ -360,7 +360,7 @@
                     </div>
                     
                     <div class="projeto">
-                            <img src="src/image/projeto-tela-de-login.jpg" alt="projeto 3" class="foto">
+                            <img src="src/assets/image/projeto-tela-de-login.jpg" alt="projeto 3" class="foto">
                         <div class="projeto-info">
                             <p class="periodo">
                                 2025
@@ -389,7 +389,7 @@
                     
                     
                     <div class="projeto">
-                            <img src="src/image/projeto-rede-social.jpg" alt="projeto 3" class="foto">
+                            <img src="src/assets/image/projeto-rede-social.jpg" alt="projeto 3" class="foto">
                         <div class="projeto-info">
                             <p class="periodo">
                                 2025
@@ -416,7 +416,7 @@
                         </div>
                     </div>
                     <div class="projeto">
-                            <img src="src/image/projeto-02-cordel.jpg" alt="projeto 2" class="foto">
+                            <img src="src/assets/image/projeto-02-cordel.jpg" alt="projeto 2" class="foto">
                         <div class="projeto-info">
                             <p class="periodo">
                                 2025
@@ -443,7 +443,7 @@
                         </div>
                     </div>
                     <div class="projeto">
-                            <img src="src/image/projeto-03-android.jpg" alt="projeto 3" class="foto">
+                            <img src="src/assets/image/projeto-03-android.jpg" alt="projeto 3" class="foto">
                         <div class="projeto-info">
                             <p class="periodo">
                                 2024
@@ -473,10 +473,11 @@
         </article>
         <!---Fim article#projetos-->
      </section>
+     <div id="loader">Carregando...</div>
     </main>
 
     <footer id="contato">
-        <form action="/api/enviar.js" method="POST" class="form-contato" id="form-contato">
+        <form action="src/api/contact.js" method="POST" class="form-contato" id="form-contato">
             <h3>Entre em contato</h3>
 
             <input type="text" name="nome" placeholder="Seu nome" required>
@@ -495,7 +496,7 @@
         <p>Portfólio desenvolvido por <a href="https://github.com/Devsantosz" target="_blank" rel="nofollow">DEVSANTOSZ</a> - &copy; 2026</p>
     </footer>
 
-    <script src="scripts/script.js"> </script>
+    <script type="module" src="src/scripts/main.js"></script>
     <script src="https://kit.fontawesome.com/0be98ff33e.js" crossorigin="anonymous"></script>
     
 

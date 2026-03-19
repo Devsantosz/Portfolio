@@ -1,17 +1,16 @@
 import nodemailer from "nodemailer";
 
-export const config = {
-  api: {
-    bodyParser: true,
-  },
-};
-
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Método não permitido" });
   }
 
   const { nome, email, mensagem } = req.body;
+
+  // ✅ Validação
+  if (!nome || !email || !mensagem) {
+    return res.status(400).json({ message: "Campos obrigatórios" });
+  }
 
   try {
     const transporter = nodemailer.createTransport({
@@ -25,7 +24,7 @@ export default async function handler(req, res) {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-      subject: "New msg - Portfólio",
+      subject: "📩 Novo contato do portfólio",
       text: `
 Nome: ${nome}
 Email: ${email}
@@ -35,9 +34,10 @@ ${mensagem}
       `,
     });
 
-    return res.status(200).json({ message: "Email enviado com sucesso!" });
+    return res.status(200).json({ message: "Email enviado!" });
+
   } catch (error) {
-    console.error("ERRO REAL:", error);
-    return res.status(500).json({ message: "Erro ao enviar email" });
+    console.error(error);
+    return res.status(500).json({ message: "Erro ao enviar" });
   }
 }

@@ -1,53 +1,72 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 790px){
+
+  /* NAV */
   nav#menu ul{
-    
     gap: 20px;
   }
 
+  /* GRID PRINCIPAL */
   main{
-    grid-template-columns: auto 300px 1fr auto; 
-    gap: 10px;
+    display: grid;
+    grid-template-columns: auto 400px 1fr auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 20px;
   }
 
-  section#welcome{
+  /* TOPO */
+  #welcome{
     grid-column: 2 / 4;
   }
 
-  section#ficha{
+  /* REMOVE GRID INTERNO (ESSENCIAL) */
+  #detalhes{
+    display: contents;
+  }
+
+  /* ===== LINHA 1 ===== */
+  #ficha{
+    grid-column: 2;
+    grid-row: 2;
+
     background: radial-gradient(circle at center bottom, var(--color1) 10%, #000000 70%);
     flex-direction: column;
+  }
+
+  #video{
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  /* ===== LINHA 2 ===== */
+  #formacao{
     grid-column: 2;
-    grid-row: 2 / 3;
-    height: fit-content;
+    grid-row: 3;
   }
 
-  section#ficha p{
-    max-width: 100%;
-    text-align: justify;
-    text-indent: 10px;
-    line-height: 1.6;
-    font-size: 1.3em;
+  #skills{
+    grid-column: 3;
+    grid-row: 3;
   }
 
-  section#detalhes{
-    grid-column: 3 / 4;
-    width: 100%;
-    min-width: 0;
+  /* ===== PROJETOS (FULL WIDTH) ===== */
+  #projetos{
+    grid-column: 2 / 4;
+    grid-row: 4;
   }
 
+  /* ===== AJUSTES GERAIS ===== */
   article,
   #projetos-container,
-  #projetos-container .projeto{
+  .projeto{
     min-width: 0;
   }
 
+  /* SKILLS */
   #skill-container .item span{
-    
     text-align: center;
   }
-
 
   #skill-container .item:hover .barra p{
     max-height: 120px;
@@ -55,13 +74,14 @@
     transform: translateY(0);
   }
 
+  /* ===== PROJETOS SCROLL ===== */
   #projetos-container{
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
 
-    width: 100%;          
-    max-width: 100%;     
+    width: 100%;
+    max-width: 100%;
 
     overflow-x: auto;
     overflow-y: hidden;
@@ -81,18 +101,29 @@
     scroll-snap-align: start;
   }
 
-  #projetos-container::-webkit-scrollbar{ height: 8px; }
-  #projetos-container::-webkit-scrollbar-track{ background: transparent; }
+  /* SCROLLBAR */
+  #projetos-container::-webkit-scrollbar{
+    height: 8px;
+  }
+
+  #projetos-container::-webkit-scrollbar-track{
+    background: transparent;
+  }
+
   #projetos-container::-webkit-scrollbar-thumb{
     background: var(--destaque);
     border-radius: 6px;
   }
+
   #projetos-container::-webkit-scrollbar-thumb:hover{
     background: var(--destaque-inverso);
   }
 
-  #projetos-container.dragging{ cursor: grabbing; }
+  #projetos-container.dragging{
+    cursor: grabbing;
+  }
 
+  /* PROJETO INFO */
   #projetos-container .projeto-info{
     display: flex;
     flex-direction: column;
@@ -103,8 +134,10 @@
     box-shadow: inset 10px 10px 10px rgba(0,0,0,0.377);
   }
 
+  /* FORM */
   .form-contato{
     margin: 20px auto;
     padding: 20px;
   }
+
 }
