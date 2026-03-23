@@ -1,143 +1,152 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 790px){
+/* TABLET (>= 768px) */
+@media (min-width: 768px){
 
-  /* NAV */
-  nav#menu ul{
-    gap: 20px;
-  }
-
-  /* GRID PRINCIPAL */
   main{
-    display: grid;
-    grid-template-columns: auto 400px 1fr auto;
-    grid-template-rows: auto auto auto auto;
-    gap: 20px;
+    max-width: 100%;
+    margin: auto;
   }
 
-  /* TOPO */
   #welcome{
-    grid-column: 2 / 4;
+    grid-column: 2 / 3;
   }
 
-  /* REMOVE GRID INTERNO (ESSENCIAL) */
-  #detalhes{
-    display: contents;
-  }
-
-  /* ===== LINHA 1 ===== */
+  /* FICHA */
   #ficha{
-    grid-column: 2;
-    grid-row: 2;
-
-    background: radial-gradient(circle at center bottom, var(--color1) 10%, #000000 70%);
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
-  #video{
-    grid-column: 3;
-    grid-row: 2;
-  }
-
-  /* ===== LINHA 2 ===== */
-  #formacao{
-    grid-column: 2;
-    grid-row: 3;
-  }
-
-  #skills{
-    grid-column: 3;
-    grid-row: 3;
-  }
-
-  /* ===== PROJETOS (FULL WIDTH) ===== */
-  #projetos{
-    grid-column: 2 / 4;
-    grid-row: 4;
-  }
-
-  /* ===== AJUSTES GERAIS ===== */
-  article,
-  #projetos-container,
-  .projeto{
-    min-width: 0;
+  .social{
+    align-items: flex-start;
+    text-align: left;
   }
 
   /* SKILLS */
-  #skill-container .item span{
-    text-align: center;
+  .skill-container{
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  #skill-container .item:hover .barra p{
-    max-height: 120px;
-    opacity: 1;
-    transform: translateY(0);
+  /* PROJETOS */
+  #projetos-container .projeto{
+    flex-direction: row;
   }
 
-  /* ===== PROJETOS SCROLL ===== */
-  #projetos-container{
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: nowrap;
+  .projeto-info{
+    flex: 1;
+  }
 
+  #projetos .foto{
+    width: 40%;
+  }
+
+}
+
+/* ========================= */
+/* DESKTOP (>=1024px) */
+/* ========================= */
+@media (min-width: 1024px){
+
+  main{
     width: 100%;
-    max-width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 
-    overflow-x: auto;
-    overflow-y: hidden;
+    display: grid;
+    gap: 20px;
 
-    cursor: grab;
-    user-select: none;
+    grid-template-columns: 1fr 2fr;
 
-    gap: 10px;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    /* 🔥 AQUI ESTÁ O SEGREDO */
+    grid-template-areas:
+      "welcome welcome"
+      "perfil video"
+      "skills formacao"
+      "projetos projetos"
+      "footer footer";
+  }
+
+  /* ===== MAPEAMENTO CERTO ===== */
+  #welcome{ 
+     
+    grid-column: 2;
+  }
+  #ficha{ grid-area: perfil; }
+  #video{ grid-area: video; }
+  #skills{ grid-area: skills; }
+  #formacao{ grid-area: formacao; }
+  #projetos{ grid-area: projetos; }
+  footer{ grid-area: footer; }
+
+  /* ===== WELCOME ===== */
+  #welcome{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ===== PERFIL ===== */
+  #ficha{
+    flex-direction: column;
+    gap: 25px;
+
+  
+    top: 90px;
+    height: fit-content;
+  }
+
+  #ficha img.foto{
+    height: 240px;
+  }
+
+  /* ===== VIDEO ===== */
+  #video{
+    justify-content: center;
+  }
+
+  /* ===== SKILLS ===== */
+  .skill-container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ===== FORMAÇÃO ===== */
+  #formacao-container{
+    gap: 25px;
+  }
+
+  /* ===== PROJETOS ===== */
+  #projetos-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
 
   #projetos-container .projeto{
-    flex: 0 0 100%;
-    height: 80vh;
-    scroll-snap-align: start;
+    flex-direction: column;
+    height: 100%;
   }
 
-  /* SCROLLBAR */
-  #projetos-container::-webkit-scrollbar{
-    height: 8px;
+  #projetos .foto{
+    width: 100%;
   }
 
-  #projetos-container::-webkit-scrollbar-track{
-    background: transparent;
-  }
-
-  #projetos-container::-webkit-scrollbar-thumb{
-    background: var(--destaque);
-    border-radius: 6px;
-  }
-
-  #projetos-container::-webkit-scrollbar-thumb:hover{
-    background: var(--destaque-inverso);
-  }
-
-  #projetos-container.dragging{
-    cursor: grabbing;
-  }
-
-  /* PROJETO INFO */
-  #projetos-container .projeto-info{
+  .projeto-info{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    height: 100%;
   }
 
-  #projetos-container .foto{
-    box-shadow: inset 10px 10px 10px rgba(0,0,0,0.377);
+  .projeto-info button{
+    margin-top: auto;
   }
 
-  /* FORM */
-  .form-contato{
-    margin: 20px auto;
-    padding: 20px;
+  /* ===== EFEITO ===== */
+  section, article{
+    transition: all 0.3s ease;
   }
 
 }
