@@ -49,3 +49,4 @@ function mostrarMensagem(texto, tipo) {
 
   setTimeout(() => msg.remove(), 4000);
 }
+

@@ -1,16 +1,11 @@
+import express from "express";
 import nodemailer from "nodemailer";
 
-export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ message: "Método não permitido" });
-  }
+const app = express();
+app.use(express.json());
 
+app.post("/api/contact", async (req, res) => {
   const { nome, email, mensagem } = req.body;
-
-  // ✅ Validação
-  if (!nome || !email || !mensagem) {
-    return res.status(400).json({ message: "Campos obrigatórios" });
-  }
 
   try {
     const transporter = nodemailer.createTransport({
@@ -24,20 +19,16 @@ export default async function handler(req, res) {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-      subject: "📩 Novo contato do portfólio",
-      text: `
-Nome: ${nome}
-Email: ${email}
-
-Mensagem:
-${mensagem}
-      `,
+      subject: "Novo contato",
+      text: `Nome: ${nome}\nEmail: ${email}\nMensagem: ${mensagem}`,
     });
 
-    return res.status(200).json({ message: "Email enviado!" });
+    res.json({ sucesso: true });
 
-  } catch (error) {
-    console.error(error);
-    return res.status(500).json({ message: "Erro ao enviar" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ erro: true });
   }
-}
+});
+
+app.listen(3000, () => console.log("Servidor rodando"));
