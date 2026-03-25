@@ -92,20 +92,21 @@ main {
 #welcome {
   width: 100%;
   min-height: calc(100vh - 67px);
-  grid-column: 1 / 3;
+  grid-column: 1 / 4;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 2;
+  text-align: center;
 }
 
 #welcome::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, var(--color2) 30%, transparent 60%);
+  background: radial-gradient(circle, var(--color2) 10%, transparent 40%);
   filter: blur(0px);
   opacity: 0.4;
   animation: float 3s infinite alternate;
@@ -149,7 +150,7 @@ main {
   grid-column: 2;
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
 }
 
@@ -173,18 +174,18 @@ main {
   width: 100%;
   text-align: justify;
   text-indent: 10px;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
 }
 
 .icon {
   display: flex;
   margin: auto;
-  gap: 25px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .social .icon a {
-  font-size: 2.2em;
+  font-size: 1.8em;
   color: var(--text-hover);
   transition: color 0.5s;
 }
@@ -219,13 +220,13 @@ section#ficha p {
   text-align: justify;
   text-indent: 10px;
   line-height: 1.5;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 /* TÍTULOS GERAIS */
 h2 {
   color: var(--color1);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* CARDS GERAIS */
@@ -322,7 +323,7 @@ h2 {
 #formacao-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 #formacao-container .curso {
