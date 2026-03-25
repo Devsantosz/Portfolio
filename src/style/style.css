@@ -43,8 +43,8 @@ header{
   
   border: 1px solid var(--color1);
   border-radius: 10px;
-  padding: 8px;
-  margin: 10px;
+  padding: 10px;
+  margin: 20px ;
   
   display: flex;
   position: sticky;
@@ -63,6 +63,7 @@ header h3{
   font-weight: bolder;
   text-transform: uppercase;
   font-size: 1.4em;
+  
 }
 
 header h3 span{
@@ -97,8 +98,8 @@ nav#menu a:hover{
 
 main{
   display: grid;
-  grid-template-columns:1fr;
-  padding: 10px;
+  grid-template-columns: 15px 1fr 15px;
+  gap: 20px;
 }
 
 #cursor {
@@ -116,7 +117,7 @@ main{
 section#welcome{
   width: 100%;
   min-height: calc(100vh - 67px);
-  grid-column: 2;
+  grid-column: 1 / 4;
 
   background-attachment: fixed;
 
@@ -179,10 +180,12 @@ section#welcome{
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px var(--color1);
- 
+  
   z-index: 2;
-  margin-bottom: 20px;
+  
   grid-column: 2;
+
+  
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -211,18 +214,18 @@ section#welcome{
   width: 100%;
   text-align: justify;
   text-indent: 10px;
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
 .icon{
   display: flex;
   margin: auto;
-  gap: 15px;
+  gap: 25px;
   flex-wrap: wrap;
 }
 
 .social .icon a{
-  font-size: 2em;
+  font-size: 2.2em;
   color: var(--text-hover);
   transition: color 0.5s;
 }
@@ -250,6 +253,7 @@ section#ficha h1{
   color: var(--color2);
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0);
   font-size: 1.6em;
+  padding-bottom: 20px;
   
 }
 
@@ -258,29 +262,26 @@ section#ficha p{
   text-align: justify;
   text-indent: 10px;
   line-height: 1.5;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
-section#detalhes{
-  grid-column: 2;
-  z-index: 2;
-}
-
-article{
-  background-color: var(--fundo-principal);
-  box-shadow: 0px 0px 5px var(--color1);
-  border-radius: 1;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-}
-
-article h2{
+h2{
   color: var(--color1);
   margin-bottom: 20px;
 }
 
+#skills, #formacao, #projetos{
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px var(--color1);
+}
+
 #video{
+
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px var(--color1);
+
   grid-column: 2;
   background-color: var(--fundo-principal);
   box-shadow: 0px 0px 5px var(--color1);
@@ -371,6 +372,10 @@ article h2{
 
 /* FORMACAO */
 
+#formacao{
+  grid-column: 2;
+}
+
 #formacao-container{
   display: flex;
   flex-direction: column;
@@ -407,15 +412,21 @@ article h2{
 
 /* FIM - FORMACAO */
 
+#projetos{
+  grid-column: 2;
+}
+
 #projetos-container{
   display: flex;
   flex-direction: column;
+
   gap: 15px;
 }
 
 #projetos-container .projeto{
   display: flex;
   flex-direction: column;
+
   gap: 10px;
 
   padding: 12px;
@@ -436,16 +447,18 @@ article h2{
 .ling{
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 10px;
   list-style: none;
+  justify-content: start;
   padding: 0;
 }
 
 .ling li{
-  background: var(--color1);
-  padding: 3px 8px;
-  border-radius: 5px;
-  font-size: 0.75rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--color1);
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 0.7rem;
 }
 
 .titulo{
@@ -496,25 +509,43 @@ article h2{
   flex-direction: column;
 }
 
+.butt{
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--color1), var(--color2));
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+
+} 
+
+.butt a{
+  width: 100%;
+
+  color:  var(--texto);
+  text-decoration: none;
+}
+
+.butt a:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
 
 button{
-  align-self: center; 
-  margin: 15px 0;
-  margin: 5px;
-  padding: 10px;
-  border: none;
+  width: 100%;
+  
+  padding: 12px;
+  border-radius: 8px;
   background: linear-gradient(135deg, var(--color1), var(--color2));
-  border: none;
-  color: var(--texto);
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  align-self: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
 
 button:hover {
-  filter: brightness(1.2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 #loader {

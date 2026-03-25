@@ -2,8 +2,8 @@
 const foto = document.getElementById('fotoPerfil');
 
 const fotos = [
-  'src/assets/images/minidev.png',
-  'src/assets/images/perfil.jpeg'
+  'src/assets/image/minidev.png',
+  'src/assets/image/perfil.jpeg'
 ];
 
 let fotoAtual = 0;

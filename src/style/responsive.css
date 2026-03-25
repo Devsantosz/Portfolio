@@ -4,7 +4,7 @@
 @media (min-width: 768px){
 
   main{
-    max-width: 100%;
+    width: 100%;
     margin: auto;
   }
 
@@ -48,38 +48,26 @@
 /* DESKTOP (>=1024px) */
 /* ========================= */
 @media (min-width: 1024px){
+  header{
+    margin: 10px 35px;
+  }
 
   main{
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
 
     display: grid;
-    gap: 20px;
+    gap: 10px;
 
-    grid-template-columns: 1fr 2fr;
-
-    /* 🔥 AQUI ESTÁ O SEGREDO */
-    grid-template-areas:
-      "welcome welcome"
-      "perfil video"
-      "skills formacao"
-      "projetos projetos"
-      "footer footer";
+    grid-template-columns: 15px 400px 1fr 15px;
+    grid-template-rows: auto;
   }
 
   /* ===== MAPEAMENTO CERTO ===== */
   #welcome{ 
-     
-    grid-column: 2;
+    grid-column: 1 / 5;
   }
-  #ficha{ grid-area: perfil; }
-  #video{ grid-area: video; }
-  #skills{ grid-area: skills; }
-  #formacao{ grid-area: formacao; }
-  #projetos{ grid-area: projetos; }
-  footer{ grid-area: footer; }
+  
 
   /* ===== WELCOME ===== */
   #welcome{
@@ -94,7 +82,7 @@
     flex-direction: column;
     gap: 25px;
 
-  
+    grid-column: 2;
     top: 90px;
     height: fit-content;
   }
@@ -106,23 +94,43 @@
   /* ===== VIDEO ===== */
   #video{
     justify-content: center;
+    grid-column: 3;
   }
 
   /* ===== SKILLS ===== */
-  .skill-container{
-    grid-template-columns: repeat(3, 1fr);
+
+  #skills{
+    grid-column: 3;
+    
+  }
+
+  #skill-container{
+    grid-template-columns: repeat(1, 1fr);
+    
   }
 
   /* ===== FORMAÇÃO ===== */
+
+  #formacao{
+    grid-column: 2;
+    grid-row: 3;
+  }
+
   #formacao-container{
-    gap: 25px;
+    gap: 20px;
   }
 
   /* ===== PROJETOS ===== */
+
+  #projetos{
+    grid-column: 2 / 4;
+  }
+
   #projetos-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
+    grid-column: 1 / 5;
   }
 
   #projetos-container .projeto{
@@ -146,7 +154,14 @@
 
   /* ===== EFEITO ===== */
   section, article{
+    margin: 10px;
     transition: all 0.3s ease;
+  }
+
+  #projetos-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
   }
 
 }
