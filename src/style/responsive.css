@@ -1,167 +1,126 @@
 @charset "UTF-8";
 
-/* TABLET (>= 768px) */
-@media (min-width: 768px){
+/* ======================== */
+/* TABLET (>= 768px)        */
+/* ======================== */
+@media (min-width: 768px) {
 
-  main{
+  main {
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
   }
 
-  #welcome{
+  #welcome {
     grid-column: 2 / 3;
   }
 
-  /* FICHA */
-  #ficha{
+  #ficha {
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
 
-  .social{
+  .social {
     align-items: flex-start;
     text-align: left;
   }
 
-  /* SKILLS */
-  .skill-container{
+  .skill-container {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* PROJETOS */
-  #projetos-container .projeto{
+  #projetos-container .projeto {
     flex-direction: row;
   }
 
-  .projeto-info{
+  .projeto-info {
     flex: 1;
   }
 
-  #projetos .foto{
+  #projetos .foto {
     width: 40%;
   }
-
 }
 
 /* ========================= */
-/* DESKTOP (>=1024px) */
+/* DESKTOP (>= 1024px)       */
 /* ========================= */
-@media (min-width: 1024px){
-  header{
+@media (min-width: 1024px) {
+
+  header {
     margin: 10px 35px;
   }
 
-  main{
+  main {
     width: 100%;
     margin: 0 auto;
-
-    display: grid;
     gap: 10px;
-
     grid-template-columns: 15px 400px 1fr 15px;
-    grid-template-rows: auto;
   }
 
-  /* ===== MAPEAMENTO CERTO ===== */
-  #welcome{ 
-    grid-column: 1 / 5;
-  }
-  
-
-  /* ===== WELCOME ===== */
-  #welcome{
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  #welcome {
+    grid-column: 1 / 4;
+    height: 80vh;
   }
 
-  /* ===== PERFIL ===== */
-  #ficha{
+  #ficha {
     flex-direction: column;
     gap: 25px;
-
     grid-column: 2;
-    top: 90px;
     height: fit-content;
   }
 
-  #ficha img.foto{
+  #ficha img.foto {
     height: 240px;
   }
 
-  /* ===== VIDEO ===== */
-  #video{
-    justify-content: center;
+  #video {
     grid-column: 3;
   }
 
-  /* ===== SKILLS ===== */
-
-  #skills{
+  #skills {
     grid-column: 3;
-    
   }
 
-  #skill-container{
-    grid-template-columns: repeat(1, 1fr);
-    
-  }
-
-  /* ===== FORMAÇÃO ===== */
-
-  #formacao{
+  #formacao {
     grid-column: 2;
     grid-row: 3;
   }
 
-  #formacao-container{
-    gap: 20px;
-  }
-
-  /* ===== PROJETOS ===== */
-
-  #projetos{
+  #projetos {
     grid-column: 2 / 4;
   }
 
-  #projetos-container{
+  #projetos-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    grid-column: 1 / 5;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    grid-column: 1 / 4;           
   }
 
-  #projetos-container .projeto{
+  #projetos-container .projeto {
     flex-direction: column;
     height: 100%;
   }
 
-  #projetos .foto{
+  #projetos .foto,
+  .projeto .foto {
     width: 100%;
   }
 
-  .projeto-info{
+  .projeto-info {
     display: flex;
     flex-direction: column;
     height: 100%;
   }
 
-  .projeto-info button{
-    margin-top: auto;
-  }
-
-  /* ===== EFEITO ===== */
-  section, article{
+  section,
+  article {
     margin: 10px;
     transition: all 0.3s ease;
   }
 
-  #projetos-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+  .butt a {
+    z-index: 20;
   }
-
 }
