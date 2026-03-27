@@ -18,8 +18,8 @@ foto.addEventListener('click', () => {
 const img = document.getElementById('System');
 
 const imagens = [
-  'src/assets/images/tela-login.png',
-  'src/assets/images/estoque.png'
+  'src/assets/image/tela-login.png',
+  'src/assets/image/estoque.png'
 ];
 
 let imgAtual = 0;
