@@ -2,8 +2,8 @@
 const foto = document.getElementById('fotoPerfil');
 
 const fotos = [
-  'src/assets/image/minidev.png',
-  'src/assets/image/perfil.jpeg'
+  'src/assets/image/perfil-dev.png',
+  'src/assets/image/perfil-real.jpeg'
 ];
 
 let fotoAtual = 0;
@@ -18,8 +18,8 @@ foto.addEventListener('click', () => {
 const img = document.getElementById('System');
 
 const imagens = [
-  'src/assets/image/tela-login.png',
-  'src/assets/image/estoque.png'
+  'src/assets/image/proj-estoque-login.png',
+  'src/assets/image/proj-estoque.png'
 ];
 
 let imgAtual = 0;
