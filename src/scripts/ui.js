@@ -3,7 +3,7 @@ const foto = document.getElementById('fotoPerfil');
 
 const fotos = [
   'src/assets/image/perfil-dev.png',
-  'src/assets/image/perfil-real.jpeg'
+  'src/assets/image/perfil.png'
 ];
 
 let fotoAtual = 0;

@@ -34,12 +34,16 @@ header {
   backdrop-filter: blur(10px);
   border: 1px solid var(--color1);
   border-radius: 10px;
-  padding: 10px;
-  margin: 15px;
+  padding: 5px;
   display: flex;
-  position: sticky;
+  width: 85%;
   top: 0;
   z-index: 999;
+
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 header h3 {
@@ -88,17 +92,28 @@ main {
   gap: 20px;
 }
 
+/* SEÇÕES GERAIS */
+
+aside, article{
+    background-color: var(--fundo-principal);
+}
+
+
+
 /* WELCOME */
 #welcome {
   width: 100%;
-  min-height: calc(100vh - 67px);
+  min-height: calc(100vh - 18px);
   grid-column: 1 / 4;
-  background-attachment: fixed;
+
+  position: relative; /* IMPORTANTE */
+  overflow: hidden;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+
   text-align: center;
 }
 
@@ -117,6 +132,7 @@ main {
   to   { transform: translateY(-50px); }
 }
 
+
 #welcome h2 {
   line-height: 1.2;
   color: var(--texto);
@@ -125,6 +141,8 @@ main {
   text-align: center;
   border-bottom: 2px solid transparent;
   text-shadow: 1px 1px 5px rgba(233, 233, 233, 0.2);
+  position: relative;
+  z-index: 2;
 }
 
 #welcome h2 span {
@@ -139,19 +157,41 @@ main {
   text-align: center;
   font-size: 1.4em;
   margin: 5px;
+  position: relative;
+  z-index: 2;
 }
+
+#welcome img {
+   position: absolute;
+  bottom: 0;          /* gruda embaixo */
+  left: 50%;
+  transform: translateX(-50%);
+
+   height: 70%;
+  width: auto;
+
+  object-fit: contain;
+
+  z-index: 1;
+  pointer-events: none; /* evita bugs de clique */
+}
+
+
 
 /* FICHA */
 #ficha {
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px var(--color1);
-  z-index: 2;
   grid-column: 2;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
+}
+
+#ficha-cont{
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--color1);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .perfil {
@@ -203,6 +243,7 @@ main {
   outline: 1px solid var(--destaque);
   cursor: pointer;
   transition: transform .2s ease;
+  background-color: var(--texto);
 }
 
 #ficha img.foto:hover {
@@ -230,7 +271,7 @@ h2 {
 }
 
 /* CARDS GERAIS */
-#skills, #formacao, #projetos, #video {
+#skills-cont, #formacao-cont, #proj-cont, #video-cont {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px var(--color1);
@@ -238,6 +279,9 @@ h2 {
 
 #video {
   grid-column: 2;
+}
+
+#video-container {
   background-color: var(--fundo-principal);
   box-shadow: 0 0 5px var(--color1);
 }
@@ -356,6 +400,22 @@ h2 {
 /* PROJETOS */
 #projetos {
   grid-column: 2;
+  
+ 
+}
+
+#proj-cont{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: var(--fundo-principal);
+  border: 1px solid var(--color1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 #projetos-container {
@@ -378,11 +438,7 @@ h2 {
   overflow: hidden;
 }
 
-#projetos-container .projeto:hover {
-  transform: translateY(-8px);
-  border-color: var(--text-hover);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-}
+
 
 #projetos-container .foto {
   width: 100%;
@@ -436,11 +492,11 @@ h2 {
   padding: 14px;
   text-align: center;
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
-  background: linear-gradient(135deg, var(--color1), var(--color2));
+  background: var(--text-hover);
   border-radius: 8px;
   transition: all 0.3s ease;
   position: relative;
@@ -448,9 +504,10 @@ h2 {
 }
 
 .butt a:hover {
+    color: var(--texto);
   transform: translateY(-3px);
   box-shadow: 0 12px 30px rgba(108, 36, 180, 0.5);
-  background: linear-gradient(135deg, var(--color2), var(--color1));
+  background: var(--color2);
 }
 
 /* BOTÃO GERAL */
