@@ -1,4 +1,4 @@
-import "./scroll.js";
-import "./form.js";
-import "./ui.js";
+import "./modules/scroll.js";
+import "./modules/form.js";
+import "./modules/ui.js";
 
