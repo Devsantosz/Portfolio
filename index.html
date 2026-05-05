@@ -3,496 +3,437 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Devsantosz</title>
+    <title>Guilherme Luz — Desenvolvedor Web</title>
     <link rel="stylesheet" href="src/style/style.css">
     <link rel="stylesheet" href="/src/style/responsive.css">
-    <meta name="description" content="Portfólio de Guilherme Luz, desenvolvedor web focado em Python, HTML, CSS e JavaScript.">
+    <meta name="description" content="Guilherme Luz — Desenvolvedor Web focado em Python, HTML, CSS e JavaScript. Transformo ideias em soluções digitais.">
     <link rel="shortcut icon" href="src/assets/icons/mao.ico" type="image/ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <img src="src/assets/image/logo-sem.png" alt="">
+    </div>
+
+    <!-- HEADER -->
     <header>
-        <h3><span>Dev</span>santosz</h3>
+        <a href="#welcome" class="logo"><span>Dev</span>santosz</a>
         <nav id="menu">
             <ul>
-                <li><a href="#welcome" class="link"><i class="fa-regular fa-house"></i></a></li>
-                <li><a href="#skills" class="link"><i class="fa-solid fa-brain"></i></a></li>
-                <li><a href="#formacao" class="link"><i class="fa-solid fa-graduation-cap"></i></a></li>
-                <li><a href="#projetos" class="link"><i class="fa-solid fa-pen-ruler"></i></a></li>
-                <li><a href="#contato" class="link"><i class="fa-solid fa-phone" aria-hidden="true"></i></i></a></li>
+                <li><a href="#sobre" class="link">Sobre</a></li>
+                <li><a href="#skills" class="link">Skills</a></li>
+                <li><a href="#projetos" class="link">Projetos</a></li>
+                <li><a href="#contato" class="link cta">Contato</a></li>
             </ul>
         </nav>
+        <button class="menu-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
     <main>
+
+        <!-- HERO -->
         <section id="welcome">
-           <h2 class="slide-in">
-                Bem-vindo ao Meu <span>Portfólio</span>
-           </h2>
-           <p class="slide-in">
-            Desenvolvendo ideias, construindo sonhos
-           </p>
-           
-        </section>
-    <section id="ficha">
-        <div id="ficha-cont">
-            <div class="perfil">
-                <h1>
-                    DEVSANTOSZ
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <p class="hero-tag slide-in">Desenvolvedor Web</p>
+                <h1 class="slide-in">
+                    Transformo ideias<br>em <span>soluções digitais</span>
                 </h1>
-                <img src="src/assets/image/perfil.png" alt="guilherme luz" class="foto" id="fotoPerfil">
-                
-            </div>
-            
-
-            <div class="social">
-                <p>
-                    Olá, eu sou Guilherme Luz! Sou um jovem de 20 anos que tem uma paixão enorme por tecnologia e desenvolvimento de software. Desde cedo, sempre fui fascinado por computadores e como eles funcionam, o que me levou a explorar o mundo da programação e inicialmente o desenvolvimento web.
+                <p class="hero-sub slide-in">
+                    Olá, sou <strong>Guilherme Luz</strong>. Desenvolvo interfaces e aplicações web com foco em boas práticas, usabilidade e código limpo.
                 </p>
-
-                <div class="icon">
-                    <a href="https://www.linkedin.com/in/guilherme-luz-085239282/" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin"></i></a>
-
-                    <a href="https://github.com/Devsantosz" target="_blank" rel="nofollow" ><i class="fa-brands fa-github"></i></a>
-
-                    <a href="https://www.instagram.com/devsantosz" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
-
-                    <a href="src/file/Currículo-Guilherme-Luz.pdf" download><i class="fa-solid fa-file"></i></a>
+                <div class="hero-actions slide-in">
+                    <a href="#projetos" class="btn-primary">Ver projetos</a>
+                    <a href="src/file/Currículo-Guilherme-Luz.pdf" download class="btn-secondary">
+                        Baixar currículo
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </a>
                 </div>
             </div>
-        </div>
-     </section>
-     <article id="video">
-        <div id="video-cont">
-            <h2><i class="fa-solid fa-user"></i>Sobre mim</h2>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/QulRzw6CWCA?si=-I_l5GUPjXtf9Fa2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="hero-scroll">
+                <span>scroll</span>
+                <div class="scroll-line"></div>
             </div>
-        </div>
-    </article> 
-    <!---Fim article#video-->
-    
-        <article id="skills">
-            <div id="skills-cont">
-            
-                <h2><i class="fa-solid fa-brain"></i> Skills</h2>
+        </section>
 
-                <!-- FRONTEND -->
-                <div class="categoria">
-                    <h3>Frontend</h3>
-                    <div class="skill-container">
-                    <!-- item -->
-                    <div class="item">
-                        <i class="fa-brands fa-html5"></i>
-                        <p>HTML5</p>
+        <!-- SOBRE -->
+        <section id="sobre">
+            <div class="container">
+                <div class="sobre-grid">
+                    <div class="sobre-foto-wrap">
+                        <img src="src/assets/image/perfil.png" alt="Guilherme Luz" class="sobre-foto" id="fotoPerfil">
+                        <div class="foto-decor"></div>
                     </div>
-
-                    <div class="item">
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <p>CSS3</p>
-                    </div>
-
-                    <div class="item">
-                        <i class="fa-brands fa-square-js"></i>
-                        <p>JavaScript</p>
-                    </div>
-                    </div>
-                </div>
-
-                <!-- BACKEND -->
-                <div class="categoria">
-                    <h3>Backend</h3>
-                    <div class="skill-container">
-                    <div class="item">
-                        <i class="fa-brands fa-python"></i>
-                        <p>Python</p>
-                    </div>
-
-                    <div class="item">
-                        <i class="fa-solid fa-database"></i>
-                        <p>Banco de Dados (SQLite)</p>
-                    </div>
-                    </div>
-                </div>
-
-                <!-- OUTROS -->
-                <div class="categoria">
-                    <h3>Outros</h3>
-                    <div class="skill-container">
-                    <div class="item">
-                        <i class="fa-solid fa-code-branch"></i>
-                        <p>Git/GitHub</p>
-                    </div>
-
-                    <div class="item">
-                        <i class="fa-solid fa-lightbulb"></i>
-                        <p>Comunicação</p>
-                    </div>
-
-                    <div class="item">
-                        <i class="fa-solid fa-lightbulb"></i>
-                        <p>Aprendizado continuo</p>
-                    </div>
+                    <div class="sobre-texto">
+                        <p class="section-label">Quem sou</p>
+                        <h2>Guilherme Luz</h2>
+                        <p class="sobre-desc">
+                            Jovem desenvolvedor de 20 anos apaixonado por tecnologia e software. Iniciei no desenvolvimento web e expandi para Python e sistemas de backend. Busco oportunidades para crescer, aprender e entregar projetos que realmente importam.
+                        </p>
+                        <ul class="sobre-destaques">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Frontend: HTML, CSS, JavaScript
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Backend: Python, Flask, SQLite
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Disponível para projetos e oportunidades
+                            </li>
+                        </ul>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/guilherme-luz-085239282/" target="_blank" rel="nofollow" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/Devsantosz" target="_blank" rel="nofollow" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/devsantosz" target="_blank" rel="nofollow" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </article>
-        <!---Fim article#skills-->
-        <article id="formacao">
-            <div id="formacao-cont">
-                <h2><i class="fa-solid fa-graduation-cap"></i>Formação / Cursos</h2>
-                <div id="formacao-container">
-                    <div class="curso">
-                        <p class="periodo">
-                            2026
-                        </p>
-                        <h3 class="instituicao">
-                            Curso em Video - CURSO
-                        </h3>
-                        <p class="titulacao">
-                            Algoritmos e Lógica de Programação 
-                        </p>
-                    </div>
-                    <div class="curso">
-                        <p class="periodo">
-                            2026
-                        </p>
-                        <h3 class="instituicao">
-                            Fundação Bradesco - CURSO
-                        </h3>
-                        <p class="titulacao">
-                            POO (PROGRAMAÇÂO ORIENTADA A OBJETOS)
-                        </p>
-                    </div>
-                    <div class="curso">
-                        <p class="periodo">
-                            2026
-                        </p>
-                        <h3 class="instituicao">
-                            Fundação Bradesco - CURSO
-                        </h3>
-                        <p class="titulacao">
-                            PYTHON - AVANÇADO
-                        </p>
-                    </div>
-                    <div class="curso">
-                        <p class="periodo">
-                            2026
-                        </p>
-                        <h3 class="instituicao">
-                            Curso em Video - CURSO
-                        </h3>
-                        <p class="titulacao">
-                            HTML5 e CSS3 - AVANÇADO
-                        </p>
-                    </div>
-                    <div class="curso">
-                        <p class="periodo">
-                            2025
-                        </p>
-                        <h3 class="instituicao">
-                            Curso em Video - CURSO
-                        </h3>
-                        <p class="titulacao">
-                            JAVASCRIPT - BÁSICO
-                        </p>
-                    </div>
-                    
-                    <div class="curso">
-                        <p class="periodo">
-                            2022 - 2023
-                        </p>
-                        <h3 class="instituicao">
-                            E E Professor Luiz Gonzaga da Costa
-                        </h3>
-                        <p class="titulacao">
-                            ENSINO MÉDIO
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </article>
-        <!---Fim article#formacao-->
-        <article id="projetos">
-            <div id="proj-cont">
-                <h2><i class="fa-solid fa-pen-ruler"></i>Projetos</h2>
-                <div id="projetos-container">
-                        <div class="projeto">
-                                <img src="src/assets/image/proj-linktree.png" alt="projeto 1" class="foto" >
-                            <div class="projeto-info">
-                                <p class="periodo">
-                                    2026
-                                </p>
-                                <h3 class="titulo">
-                                    Connection
-                                </h3>
-                                <p>
-                                Página estilo link na bio com HTML e CSS, reunindo links profissionais em layout responsivo.
-                                </p>
-                                
-                                <h3 class="titulo-s">
-                                    Ferramentas e Linguagens:
-                                </h3>
-                                <ul class="ling">
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                    
-                                </ul>
-                                <div class="butt">
-                                    <a href="https://connection-six.vercel.app/" target="_blank" rel="nofollow">
-                                        Saiba mais
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="projeto">
-                                <img src="src/assets/image/proj-estoque.png" alt="projeto 1" class="foto" id="System">
-                            <div class="projeto-info">
-                                <p class="periodo">
-                                    2026
-                                </p>
-                                <h3 class="titulo">
-                                    StockFlow 
-                                </h3>
-                                <p>
-                                    Aplicação web de estoque com Flask e SQLite, usando Jinja2 e CSS Grid responsivo.
-                                </p>
-                                
-                                <h3 class="titulo-s">
-                                    Ferramentas e Linguagens:
-                                </h3>
-                                <ul class="ling">
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                    <li>PYTHON</li>
-                                    <li>SQLite</li>
-                                    
-                                </ul>
-                                <div class="butt">
-                                    <a href="https://github.com/Devsantosz/Sistema-de-estoque" target="_blank" rel="nofollow">
-                                        Saiba mais
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="projeto">
-                                <img src="src/assets/image/proj-portfolio.png" alt="projeto 1" class="foto">
+        </section>
 
-                            <div class="projeto-info">
-                                <p class="periodo">
-                                    2026
-                                </p>
-                                <h3 class="titulo">
-                                    Portfólio Pessoal
-                                </h3>
-                                <p>
-                                    Projeto focado na apresentação profissional, com boas práticas de HTML, CSS e experiência do usuário.
-                                </p>
-                                <h3 class="titulo-s">
-                                    Ferramentas e Linguagens:
-                                </h3>
-                                <ul class="ling">
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                    <li>JavaScripts</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="projeto">
-                                <img src="src/assets/image/proj-system-cad.jpg" alt="projeto 1" class="foto">
-                            <div class="projeto-info">
-                                <p class="periodo">
-                                    2026
-                                </p>
-                                <h3 class="titulo">
-                                    Sistema de cadastro 
-                                </h3>
-                                <p>
-                                    Sistema de cadastro com Python e SQLite, com CRUD completo e POO.
-                                </p>
-                                
-                                <h3 class="titulo-s">
-                                    Ferramentas e Linguagens:
-                                </h3>
-                                <ul class="ling">
-                                    <li>PYTHON</li>
-                                    <li>SQLite</li>
-                                    <li>PANDAS</li>
-                                    <li>TKINTER</li>
-                                </ul>
-                                <div class="butt">
-                                    <a href="https://github.com/Devsantosz/sistema-de-cadastro" target="_blank" rel="nofollow">
-                                        Saiba mais
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="projeto">
-                                <img src="src/assets/image/proj-calculadora.jpg" alt="projeto 1" class="foto">
-                            <div class="projeto-info">
-                                <p class="periodo">
-                                    2026
-                                </p>
-                                <h3 class="titulo">
-                                    Calculadora
-                                </h3>
-                                <p>
-                                    Calculadora desktop em Python com Kivy, focada em usabilidade e boas práticas.
-                                </p>
-                                
-                                <h3 class="titulo-s">
-                                    Ferramentas e Linguagens:
-                                </h3>
-                                <ul class="ling">
-                                    <li>PYTHON</li>
-                                    <li>KIVY</li>
-                                </ul>
-                                <div class="butt">
-                                    <a href="https://github.com/Devsantosz/Calculadora-Python" target="_blank" rel="nofollow">
-                                        Saiba mais
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="projeto">
-                                <img src="src/assets/image/proj-tela-de-login.jpg" alt="projeto 3" class="foto">
-                            <div class="projeto-info">
-                                <p class="periodo">
-                                    2025
-                                </p>
-                                <h3 class="titulo">
-                                    Projeto Tela de Login
-                                </h3>
-                                <p>
-                                Tela de login responsiva com HTML5 e CSS3, focada em usabilidade e boas práticas.
-                                </p>
-                                
-                                <h3 class="titulo-s">
-                                    Ferramentas e Linguagens:
-                                </h3>
-                                <ul class="ling">
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                </ul>
-                                <div class="butt">
-                                    <a href="https://devsantosz.github.io/projeto-login/" target="_blank" rel="nofollow">
-                                        Saiba mais
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="projeto">
-                                <img src="src/assets/image/proj-rede-social.jpg" alt="projeto 3" class="foto">
-                            <div class="projeto-info">
-                                <p class="periodo">
-                                    2025
-                                </p>
-                                <h3 class="titulo">
-                                    Projeto Rede Social
-                                </h3>
-                                <p>
-                                    Simulação de smartphone com navegação via iframe, responsiva e bem estruturada.
-                                </p>
-                                
-                                <h3 class="titulo-s">
-                                    Ferramentas e Linguagens:
-                                </h3>
-                                <ul class="ling">
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                </ul>
-                                <div class="butt">
-                                    <a href="https://devsantosz.github.io/Projeto-Social/" target="_blank" rel="nofollow">
-                                        Saiba mais
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="projeto">
-                                <img src="src/assets/image/proj-02-cordel.jpg" alt="projeto 2" class="foto">
-                            <div class="projeto-info">
-                                <p class="periodo">
-                                    2025
-                                </p>
-                                <h3 class="titulo">
-                                    Projeto Cordel
-                                </h3>
-                                <p>
-                                    Projeto de efeito parallax com HTML e CSS, focado em profundidade e experiência imersiva.
-                                </p>
-                                
-                                <h3 class="titulo-s">
-                                    Ferramentas e Linguagens:
-                                </h3>
-                                <ul class="ling">
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                </ul>
-                                <div class="butt">
-                                    <a href="https://devsantosz.github.io/Projeto-Cordal/" target="_blank" rel="nofollow">
-                                        Saiba mais
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="projeto">
-                                <img src="src/assets/image/proj-03-android.jpg" alt="projeto 3" class="foto">
-                            <div class="projeto-info">
-                                <p class="periodo">
-                                    2024
-                                </p>
-                                <h3 class="titulo">
-                                Projeto Android
-                                </h3>
-                                <p>
-                                    Projeto de site Android com HTML e CSS, focado em layout, semântica e organização.
-                                </p>
-                                
-                                <h3 class="titulo-s">
-                                    Ferramentas e Linguagens:
-                                </h3>
-                                <ul class="ling">
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                </ul>
-                                <div class="butt">
-                                    <a href="https://devsantosz.github.io/projeto-android/" target="_blank" rel="nofollow">   
-                                    Saiba mais  
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+        <!-- VIDEO SOBRE MIM -->
+        <section id="video">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">Apresentação</p>
+                    <h2>Me conheça melhor</h2>
+                </div>
+                <div class="video-wrapper">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/QulRzw6CWCA?si=-I_l5GUPjXtf9Fa2" title="Apresentação Guilherme Luz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
-        </article>
-        <!---Fim article#projetos-->
-     <div id="loader"><img src="src/assets/image/logo-sem.png" alt=""></div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">Tecnologias</p>
+                    <h2>O que eu domino</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3>Frontend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fa-brands fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fa-brands fa-square-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Backend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fa-brands fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fa-solid fa-database"></i>
+                                <span>SQLite</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fa-solid fa-server"></i>
+                                <span>Flask</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Ferramentas</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fa-brands fa-git-alt"></i>
+                                <span>Git/GitHub</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fa-solid fa-layer-group"></i>
+                                <span>Vercel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMAÇÃO -->
+        <section id="formacao">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">Trajetória</p>
+                    <h2>Formação & Cursos</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-ano">2026</div>
+                        <div class="timeline-card">
+                            <h3>Algoritmos e Lógica de Programação</h3>
+                            <p>Curso em Vídeo</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-ano">2026</div>
+                        <div class="timeline-card">
+                            <h3>POO — Programação Orientada a Objetos</h3>
+                            <p>Fundação Bradesco</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-ano">2026</div>
+                        <div class="timeline-card">
+                            <h3>Python Avançado</h3>
+                            <p>Fundação Bradesco</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-ano">2026</div>
+                        <div class="timeline-card">
+                            <h3>HTML5 e CSS3 — Avançado</h3>
+                            <p>Curso em Vídeo</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-ano">2025</div>
+                        <div class="timeline-card">
+                            <h3>JavaScript — Básico</h3>
+                            <p>Curso em Vídeo</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-ano">2022–23</div>
+                        <div class="timeline-card">
+                            <h3>Ensino Médio</h3>
+                            <p>E.E. Professor Luiz Gonzaga da Costa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section id="projetos">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">Trabalhos</p>
+                    <h2>Projetos em destaque</h2>
+                </div>
+                <div class="projetos-grid">
+
+                    <!-- PROJETO 1 — DESTAQUE -->
+                    <div class="projeto projeto-destaque">
+                        <div class="projeto-img">
+                            <img src="src/assets/image/proj-estoque.png" alt="StockFlow">
+                            <div class="projeto-overlay">
+                                <a href="https://github.com/Devsantosz/Sistema-de-estoque" target="_blank" rel="nofollow" class="overlay-btn">Ver projeto →</a>
+                            </div>
+                        </div>
+                        <div class="projeto-info">
+                            <span class="projeto-ano">2026</span>
+                            <h3>StockFlow</h3>
+                            <p>Aplicação web completa de controle de estoque com Flask e SQLite. CRUD, layout responsivo com CSS Grid e templates Jinja2.</p>
+                            <div class="projeto-tags">
+                                <span>Python</span><span>Flask</span><span>SQLite</span><span>HTML5</span><span>CSS3</span>
+                            </div>
+                            <a href="https://github.com/Devsantosz/Sistema-de-estoque" target="_blank" rel="nofollow" class="projeto-link">Ver no GitHub →</a>
+                        </div>
+                    </div>
+
+                    <div class="projeto projeto-destaque">
+                        <div class="projeto-img">
+                            <img src="src/assets/image/proj-system-cad.jpg" alt="Sistema de Cadastro">
+                            <div class="projeto-overlay">
+                                <a href="https://github.com/Devsantosz/sistema-de-cadastro" target="_blank" rel="nofollow" class="overlay-btn">Ver projeto →</a>
+                            </div>
+                        </div>
+                        <div class="projeto-info">
+                            <span class="projeto-ano">2026</span>
+                            <h3>Sistema de Cadastro</h3>
+                            <p>Aplicação desktop com Python, SQLite e Tkinter. CRUD completo, POO e integração com Pandas para relatórios.</p>
+                            <div class="projeto-tags">
+                                <span>Python</span><span>SQLite</span><span>Tkinter</span><span>Pandas</span>
+                            </div>
+                            <a href="https://github.com/Devsantosz/sistema-de-cadastro" target="_blank" rel="nofollow" class="projeto-link">Ver no GitHub →</a>
+                        </div>
+                    </div>
+
+                    <!-- PROJETOS MENORES -->
+                    <div class="projeto">
+                        <div class="projeto-img">
+                            <img src="src/assets/image/proj-linktree.png" alt="Connection">
+                            <div class="projeto-overlay">
+                                <a href="https://connection-six.vercel.app/" target="_blank" rel="nofollow" class="overlay-btn">Ver projeto →</a>
+                            </div>
+                        </div>
+                        <div class="projeto-info">
+                            <span class="projeto-ano">2026</span>
+                            <h3>Connection</h3>
+                            <p>Link na bio responsivo, reunindo links profissionais em layout limpo.</p>
+                            <div class="projeto-tags"><span>HTML5</span><span>CSS3</span></div>
+                            <a href="https://connection-six.vercel.app/" target="_blank" rel="nofollow" class="projeto-link">Ver ao vivo →</a>
+                        </div>
+                    </div>
+
+                    <div class="projeto">
+                        <div class="projeto-img">
+                            <img src="src/assets/image/proj-portfolio.png" alt="Portfólio">
+                        </div>
+                        <div class="projeto-info">
+                            <span class="projeto-ano">2026</span>
+                            <h3>Portfólio Pessoal</h3>
+                            <p>Este portfólio — construído com HTML, CSS e JS, com foco em boas práticas e experiência do usuário.</p>
+                            <div class="projeto-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                            <span class="projeto-link" style="opacity:0.4; cursor:default;">Você está aqui :)</span>
+                        </div>
+                    </div>
+
+                    <div class="projeto">
+                        <div class="projeto-img">
+                            <img src="src/assets/image/proj-calculadora.jpg" alt="Calculadora">
+                            <div class="projeto-overlay">
+                                <a href="https://github.com/Devsantosz/Calculadora-Python" target="_blank" rel="nofollow" class="overlay-btn">Ver projeto →</a>
+                            </div>
+                        </div>
+                        <div class="projeto-info">
+                            <span class="projeto-ano">2026</span>
+                            <h3>Calculadora Python</h3>
+                            <p>App desktop com Kivy, focado em usabilidade e boas práticas.</p>
+                            <div class="projeto-tags"><span>Python</span><span>Kivy</span></div>
+                            <a href="https://github.com/Devsantosz/Calculadora-Python" target="_blank" rel="nofollow" class="projeto-link">Ver no GitHub →</a>
+                        </div>
+                    </div>
+
+                    <div class="projeto">
+                        <div class="projeto-img">
+                            <img src="src/assets/image/proj-tela-de-login.jpg" alt="Tela de Login">
+                            <div class="projeto-overlay">
+                                <a href="https://devsantosz.github.io/projeto-login/" target="_blank" rel="nofollow" class="overlay-btn">Ver projeto →</a>
+                            </div>
+                        </div>
+                        <div class="projeto-info">
+                            <span class="projeto-ano">2025</span>
+                            <h3>Tela de Login</h3>
+                            <p>Interface responsiva com foco em usabilidade e acessibilidade.</p>
+                            <div class="projeto-tags"><span>HTML5</span><span>CSS3</span></div>
+                            <a href="https://devsantosz.github.io/projeto-login/" target="_blank" rel="nofollow" class="projeto-link">Ver ao vivo →</a>
+                        </div>
+                    </div>
+
+                    <div class="projeto">
+                        <div class="projeto-img">
+                            <img src="src/assets/image/proj-rede-social.jpg" alt="Projeto Rede Social">
+                            <div class="projeto-overlay">
+                                <a href="https://devsantosz.github.io/Projeto-Social/" target="_blank" rel="nofollow" class="overlay-btn">Ver projeto →</a>
+                            </div>
+                        </div>
+                        <div class="projeto-info">
+                            <span class="projeto-ano">2025</span>
+                            <h3>Rede Social</h3>
+                            <p>Simulação de smartphone com navegação via iframe, responsiva e estruturada.</p>
+                            <div class="projeto-tags"><span>HTML5</span><span>CSS3</span></div>
+                            <a href="https://devsantosz.github.io/Projeto-Social/" target="_blank" rel="nofollow" class="projeto-link">Ver ao vivo →</a>
+                        </div>
+                    </div>
+
+                    <div class="projeto">
+                        <div class="projeto-img">
+                            <img src="src/assets/image/proj-02-cordel.jpg" alt="Projeto Cordel">
+                            <div class="projeto-overlay">
+                                <a href="https://devsantosz.github.io/Projeto-Cordal/" target="_blank" rel="nofollow" class="overlay-btn">Ver projeto →</a>
+                            </div>
+                        </div>
+                        <div class="projeto-info">
+                            <span class="projeto-ano">2025</span>
+                            <h3>Projeto Cordel</h3>
+                            <p>Efeito parallax com HTML e CSS, focado em profundidade e imersão.</p>
+                            <div class="projeto-tags"><span>HTML5</span><span>CSS3</span></div>
+                            <a href="https://devsantosz.github.io/Projeto-Cordal/" target="_blank" rel="nofollow" class="projeto-link">Ver ao vivo →</a>
+                        </div>
+                    </div>
+
+                    <div class="projeto">
+                        <div class="projeto-img">
+                            <img src="src/assets/image/proj-03-android.jpg" alt="Projeto Android">
+                            <div class="projeto-overlay">
+                                <a href="https://devsantosz.github.io/projeto-android/" target="_blank" rel="nofollow" class="overlay-btn">Ver projeto →</a>
+                            </div>
+                        </div>
+                        <div class="projeto-info">
+                            <span class="projeto-ano">2024</span>
+                            <h3>Android Fan Page</h3>
+                            <p>Site temático com foco em layout, semântica e organização.</p>
+                            <div class="projeto-tags"><span>HTML5</span><span>CSS3</span></div>
+                            <a href="https://devsantosz.github.io/projeto-android/" target="_blank" rel="nofollow" class="projeto-link">Ver ao vivo →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- FOOTER / CONTATO -->
     <footer id="contato">
-        <form method="POST" class="form-contato" id="form-contato">
-            <h3>Entre em contato</h3>
-
-            <input type="text" name="nome" placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Seu email" required>
-            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-
-            <button type="submit">Enviar mensagem</button>
-        </form>
-        <p>Portfólio desenvolvido por <a href="https://github.com/Devsantosz" target="_blank" rel="nofollow">DEVSANTOSZ</a> - &copy; 2026</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <p class="section-label">Vamos conversar</p>
+                    <h2>Entre em contato</h2>
+                    <p class="footer-desc">Seja para um projeto, uma oportunidade ou só para bater um papo sobre tecnologia — é só mandar uma mensagem.</p>
+                    <div class="footer-links">
+                        <a href="https://www.linkedin.com/in/guilherme-luz-085239282/" target="_blank" rel="nofollow">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/Devsantosz" target="_blank" rel="nofollow">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                <form method="POST" class="form-contato" id="form-contato">
+                    <input type="text" name="nome" placeholder="Seu nome" required>
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+                    <button type="submit">Enviar mensagem</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Portfólio desenvolvido por <a href="https://github.com/Devsantosz" target="_blank" rel="nofollow">Guilherme Luz</a> &copy; 2026</p>
+        </div>
     </footer>
 
-    <script type="module" src="src/scripts/main.js"></script>
+     <script type="module" src="src/scripts/main.js"></script>
     <script src="https://kit.fontawesome.com/0be98ff33e.js" crossorigin="anonymous"></script>
     
-
+ 
     <script>
         window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
-
     <script defer src="/_vercel/speed-insights/script.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
 </body>

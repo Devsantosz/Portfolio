@@ -18,3 +18,30 @@ navLinks.forEach(link => {
 window.addEventListener("load", () => {
   document.getElementById("loader").style.display = "none";
 });
+
+const toggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('nav#menu ul');
+ 
+        toggle.addEventListener('click', () => {
+            const isOpen = navList.classList.toggle('open');
+            toggle.classList.toggle('active', isOpen);
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+ 
+        // Fecha ao clicar em qualquer link
+        navList.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('open');
+                toggle.classList.remove('active');
+                toggle.setAttribute('aria-expanded', false);
+            });
+        });
+ 
+        // Fecha ao clicar fora
+        document.addEventListener('click', (e) => {
+            if (!toggle.contains(e.target) && !navList.contains(e.target)) {
+                navList.classList.remove('open');
+                toggle.classList.remove('active');
+                toggle.setAttribute('aria-expanded', false);
+            }
+        });
