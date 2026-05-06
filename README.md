@@ -2,11 +2,6 @@
 
 <div align="center">
 
-![Status](https://img.shields.io/badge/status-online-6c24b4?style=flat-square)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 
 **Portfólio pessoal desenvolvido com HTML5, CSS3 e JavaScript puro — design minimalista, responsivo e focado em conversão.**
 
@@ -16,24 +11,14 @@
 
 ---
 
-## 📋 Índice
-
-- [Sobre o projeto](#sobre-o-projeto)
-- [Seções](#seções)
-- [Tecnologias](#tecnologias)
-- [Estrutura de arquivos](#estrutura-de-arquivos)
-- [Como rodar localmente](#como-rodar-localmente)
-- [Deploy](#deploy)
-- [Projetos exibidos](#projetos-exibidos)
-- [Contato](#contato)
-
----
-
 ## Sobre o projeto
 
 Portfólio pessoal criado para apresentar minha trajetória como desenvolvedor web. O design é minimalista, com identidade visual em preto, roxo e amarelo, construído do zero sem frameworks ou bibliotecas de UI — apenas HTML, CSS e JavaScript puro.
 
 O objetivo é atender tanto **recrutadores** (que buscam clareza sobre skills e experiência) quanto **clientes** (que precisam entender o que pode ser entregue e como entrar em contato).
+
+<img width="1264" height="888" alt="proj-portfolio" src="https://github.com/user-attachments/assets/eabb5058-ed7b-46e3-8608-122f9d44fee3" />
+
 
 ---
 
@@ -118,15 +103,7 @@ open index.html
 
 O projeto está hospedado na **Vercel** com deploy automático a cada push na branch `main`.
 
-```
-main branch → Vercel → https://devsantosz.vercel.app
-```
-
-Para fazer seu próprio deploy:
-
-1. Faça um fork do repositório
-2. Acesse [vercel.com](https://vercel.com) e importe o projeto do GitHub
-3. Nenhuma configuração adicional é necessária — a Vercel detecta HTML estático automaticamente
+main branch → Vercel → https://www.devsantosz.site
 
 ---
 
@@ -161,5 +138,5 @@ Para fazer seu próprio deploy:
 ---
 
 <div align="center">
-  <sub>Desenvolvido por <a href="https://github.com/Devsantosz">Guilherme Luz</a> © 2026</sub>
+  <sub>Desenvolvido por <a href="https://github.com/Devsantosz">Devsantosz</a> © 2026</sub>
 </div>
