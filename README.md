@@ -80,25 +80,6 @@ portfolio/
 
 ---
 
-## Como rodar localmente
-
-Não há dependências ou build step. Basta clonar e abrir no navegador.
-
-```bash
-# Clone o repositório
-git clone https://github.com/Devsantosz/portfolio.git
-
-# Entre na pasta
-cd portfolio
-
-# Abra no navegador (ou use Live Server no VS Code)
-open index.html
-```
-
-> **Recomendado:** use a extensão [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) no VS Code para hot reload durante o desenvolvimento.
-
----
-
 ## Deploy
 
 O projeto está hospedado na **Vercel** com deploy automático a cada push na branch `main`.
